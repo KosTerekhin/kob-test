@@ -1,0 +1,67 @@
+@import '../../../../templates/wrap/mainWrap';
+@import '../../../../templates/checkmark/checkmark';
+@import '../../../../templates/buttons/buyButton';
+
+
+.login-main-wrap {
+    @include main-wrap;
+    margin-bottom: rem(230px) !important;
+
+    >h3 {
+        margin-top: rem(39px) !important;
+    }
+
+    >p{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;       
+        text-align: center;   
+        color: var(--secondary-black-color);     
+    }
+
+    >a {
+        @include clear-link(var(--secondary-black-color));
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        margin-top: rem(18px) !important;
+    }
+}
+
+
+// login page checkmark
+.login--checkmark{
+    @include login-checkmark;
+
+
+    .login---checkmark{
+        white-space: normal;
+    }
+}
+
+    .checkmark-left{
+        display: flex;
+        justify-content: flex-start;
+
+        @media only screen and (max-width: 767px){
+            justify-content: center;
+        } 
+    }
+
+    .checkmark-center{
+        display: flex;
+        justify-content: center;
+
+        // @media only screen and (max-width: 767px){
+        //     justify-content: center;
+        // } 
+    }

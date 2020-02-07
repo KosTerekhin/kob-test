@@ -1,0 +1,27 @@
+@import '../../../../components/body/landing/carouselNav';
+@import '../../../..//templates/product/productSingle';
+
+
+.historypage--tovar-mobile {
+    >.owl-carousel {
+        .owl-item img {
+            width: auto;
+        }
+
+        .item {
+            padding: rem(7px) 0;  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+             // single product 
+             @include product-single;
+             
+             @media only screen and (max-width: 420px){          
+                border: none !important;
+            }
+        }
+    }
+    // carousel nav panel
+    @include carousel-nav-circles;
+}

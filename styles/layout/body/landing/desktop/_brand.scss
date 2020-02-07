@@ -1,0 +1,45 @@
+
+
+.landing-brands-wrap {
+    background-color: var(--landing-main-bg) !important;
+    padding: rem(71px) rem(255px);
+
+    @media only screen and (max-width: 1700px){
+        padding: rem(71px) rem(55px);
+    }
+
+    @media only screen and (max-width: 1500px){
+        padding: rem(71px) 0;
+        padding-left: 20px;
+    }
+
+    @include mobile-ultrasmall {
+        padding: 0;
+        background-color: var(--main-text-color) !important;
+    }
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        margin-bottom: rem(32px) !important;
+        flex-basis: 100%;
+    }
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        img {
+            display: block;
+            max-width: 18%;
+            width: auto;
+            margin: auto;
+            filter: var(--svg-gray-color-history);
+        }
+    }
+}
+    

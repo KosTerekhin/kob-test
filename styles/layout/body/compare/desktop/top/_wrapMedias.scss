@@ -1,0 +1,54 @@
+@mixin main-wrap {
+    margin: rem(83px) rem(226px) rem(108px) rem(261px);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+    overflow: auto;
+
+    >div{
+        width: 100%;
+        // header wrap
+        &:first-child{
+            display: flex;
+            justify-content: center;
+
+        };
+        // compare elemts all
+        &:nth-of-type(2){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            // single element
+            >div{
+                display: flex;
+                flex-direction: column;
+                min-width: rem(678px);
+                margin-right: 1.5vw;
+                width: 48.5vw;
+
+                @include small-screen {
+                    min-width: auto;
+                }
+
+                @include mobile-ultrasmall{
+                    min-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1700px){
+        margin: rem(52px) rem(55px) rem(52px) rem(55px);
+    }
+
+    @media only screen and (max-width: 1500px){
+        margin: rem(52px) rem(20px) rem(52px) rem(20px);
+    }
+
+    @include small-screen {
+        margin: 36px 2% 2% 2%;
+    }
+}

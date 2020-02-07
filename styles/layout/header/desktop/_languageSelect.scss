@@ -1,0 +1,113 @@
+.dropdown {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    background-color: var(--main-black-color) !important;
+    border: none !important;
+    color: var(--main-text-color) !important;
+    padding: 0;
+    padding-left: 5px;
+    margin: 0;
+    box-shadow: none;
+    font-weight: 600 !important;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    margin: -.3em 0.6em 0 .4em;
+    vertical-align: middle;
+    content: "";
+    border: .3em solid !important;;
+    border-width: 0 .15em .15em 0 !important;
+    transform: rotateZ(45deg) !important;
+}
+
+.dropdown-menu {
+    top: 3px !important;
+    left: -13px !important;
+    background-color: var(--main-text-color);
+    color: var(--main-black-color);
+    float: right;
+    border: none !important;;
+    border-radius: 0 !important;;
+    padding: 0.45rem 0 !important;;
+    width: auto !important;;
+    min-width: 8rem !important;
+    height: auto;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        i {
+            color: var(--main-black-color);
+            transform: scale(0.7, 0.6);
+            padding-left: 9px;
+            opacity: 0;;
+        }
+
+        .kob-language-active {
+            opacity: 1 !important;
+        }
+
+        a {
+            color: var(--main-black-color); 
+            padding: 0;
+            text-align: left;
+            padding-left: 7px;
+            padding-right: 15px;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.75rem;
+
+            &:hover {
+                background-color: var(--main-text-color);
+                color: rgb(66, 66, 66);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1400px){
+        left: -20px !important;
+    }
+    // @media only screen and (max-width: 1050px){
+    //     left: -36px !important;
+    // }
+        
+    
+}
+
+.arrow-up {
+    position: absolute;
+    top: -5px;
+    left: 42px;
+    width: 22px; 
+    height: 22px; 
+    background-color: var(--main-text-color);
+    transform: rotate(45deg);
+    z-index: -1;
+
+    @media only screen and (max-width: 1400px){
+        left: 72px;
+    }
+    @media only screen and (max-width: 1050px){
+        left: 52px;
+    }
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    background-color: var(--main-black-color);
+    color: lightgray;
+}
+

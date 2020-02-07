@@ -1,0 +1,40 @@
+@import '../../../../../templates/buttons/buyButton';
+
+.shoppingcart--bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: rem(96px);
+    margin-top: rem(28px);
+    margin-bottom: rem(131px);
+
+    @include mobile-ultrasmall {
+        margin-left: 1%;
+    }
+
+    >a {
+        // continue shopping
+        &:nth-of-type(1){
+            @include buy-button-gray(261px, 52px, 21.7417px, 30px);
+            @media only screen and (max-width: 425px){
+                flex-basis: 48%;
+                width: 100%;
+                height: 40px;
+                >p{
+                    text-align: center;
+                    
+                }
+            }
+        }
+        // buy 
+        &:nth-of-type(2){
+            @include buy-button-black(261px, 52px, 21.7417px, 30px);
+            @media only screen and (max-width: 425px){
+                flex-basis: 48%;
+                width: 100%;
+                height: 40px;
+            }
+        }
+
+    }
+}

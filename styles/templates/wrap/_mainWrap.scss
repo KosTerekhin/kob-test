@@ -1,0 +1,37 @@
+@mixin main-wrap {
+    margin: rem(52px) rem(226px) 0 rem(261px);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    @media only screen and (max-width: 1700px){
+        margin: rem(52px) rem(55px) 0 rem(55px);
+    }
+
+    @media only screen and (max-width: 1500px){
+        margin: rem(52px) rem(20px) 0 rem(20px);
+    }
+
+    @include small-screen {
+        margin: 36px 2% 0 2%;
+    }
+}
+
+@mixin main-wrap-padding {
+    padding: rem(52px) rem(226px) 0 rem(261px);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    @media only screen and (max-width: 1700px){
+        padding: rem(52px) rem(55px) 0 rem(55px);
+    }
+
+    @media only screen and (max-width: 1500px){
+        padding: rem(52px) rem(20px) 0 rem(20px);
+    }
+
+    @include small-screen {
+        padding: 36px 2% 0 2%;
+    }
+}

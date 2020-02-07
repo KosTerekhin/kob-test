@@ -1,0 +1,70 @@
+// MEDIA SCREEN SIZES
+@mixin ultra-large {
+    @media only screen and (min-width: 1950px){
+        @content
+    }
+};
+
+@mixin large-screen {
+    @media only screen and (max-width: 1600px){
+        @content
+    }
+};
+
+@mixin medium-screen {
+    @media only screen and (max-width: 1400px){
+        @content
+    }
+};
+
+@mixin small-screen {
+    @media only screen and (max-width: 1050px){
+        @content
+    }
+};
+
+@mixin mobile-screen {
+    @media only screen and (max-width: 900px){
+        @content
+    }
+};
+
+@mixin mobile-ultrasmall {
+    @media only screen and (max-width: 600px){
+        @content
+    }
+};
+
+
+// DISPLAY MIXINS 
+
+// display flex
+@mixin dflex($jc: center, $ai: center, $fd: row ) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+// BACKGROUD
+
+@mixin bg($bg, $bsize: cover, $bposition:0 0) {
+    background: $bg;
+    background-size: $bsize;
+    background-position: $bposition;
+    background-repeat: no-repeat;
+}
+
+// NO DECORATION FOR A-TAG
+
+@mixin clear-link($color) {
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: $color !important; 
+
+    &:hover{
+        color: $color !important; 
+    }
+}

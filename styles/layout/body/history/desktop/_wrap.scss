@@ -1,0 +1,69 @@
+@import '../../../../utilities/colors';
+@import '../../../../utilities/fonts';
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+
+@import './tovari/allTovari';
+@import './download/download';
+@import './top/video';
+@import './top/text';
+
+@import '../components/buttonMore';
+
+@import '../../../../templates/product/productSingle';
+@import '../../../../templates/product/fiveProductsRow';
+
+.historypage-mid-wrap {
+    margin: rem(19px) rem(226px) 0 rem(261px);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    @media only screen and (max-width: 1700px){
+        margin: rem(19px) rem(55px) 0 rem(55px);
+    }
+
+    @media only screen and (max-width: 1500px){
+        margin: rem(19px) rem(20px) 0 rem(20px);
+    }
+    
+    .historypage--video-wrap {
+        @include historypage--video;
+    }
+
+    .historypage--text {
+        @include historypage--text;
+    }
+
+    .historypage--download {
+        @include historypage--download
+    };
+    
+    .historypage--tovar-wrap{
+        width: 100%;
+        h3 {
+            font-style: normal !important;
+            font-weight: bold !important;
+            font-size: 42px !important;
+            line-height: 60px !important;
+            text-align: center !important;
+            text-transform: uppercase !important; 
+            margin-bottom: 23px !important;
+        }
+
+        .historypage---tovari {
+            @include five-products;
+        }
+    
+        .historypage---more {
+            display: flex;
+            justify-content: center;
+            margin-top: rem(55px);
+            >a {
+                @include historypage---more
+            }
+        }
+    }
+
+    
+} 

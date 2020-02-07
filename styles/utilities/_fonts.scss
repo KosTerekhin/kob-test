@@ -1,0 +1,34 @@
+@import './mixins';
+
+@mixin main-font {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "Segoe UI";
+}
+
+// FONT SIZES
+
+$desktop-ultralarge-font: 20px;
+$desktop-large-font: 16px;
+$desktop-medium-font: 13px;
+$mobile-main-font: 11px;
+$content-font: $desktop-large-font;
+
+// OVERALL FONTS SETUP 
+
+html {
+    @include main-font;
+
+    font-size: $content-font;
+
+    @include ultra-large {
+        $content-font: $desktop-ultralarge-font;
+        font-size: $content-font;
+    };
+    @include medium-screen {
+        $content-font: $desktop-medium-font;
+        font-size: $content-font;
+    };
+    @include small-screen {
+        $content-font: $mobile-main-font;
+        font-size: $content-font;
+    };   
+}

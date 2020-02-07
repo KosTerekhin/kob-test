@@ -1,0 +1,65 @@
+@mixin menu-proizvoditeli-dostupnost {
+   
+    .catalogpage---menu-proizvoditeli,
+    .catalogpage---menu-dostupnost{
+        margin-bottom: rem(22px);
+        @include moreAccordion;
+        >.row {
+            .multi-collapse {
+                >.card {
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: rem(2px) 0 rem(10px) 0 !important;
+                    }
+                }
+            } 
+        }
+
+        >p {
+            @include menu-paragraph;
+            margin-bottom: rem(9px) !important;
+
+        }
+        display: flex;
+        flex-direction: column;
+        // CATALOG ITEM
+        >div {
+            padding: rem(2px) rem(15px) rem(10px) rem(16px) !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            @include menu-checkmark;
+            .menu--checkmark {
+                color: #4F4F4F;
+                font-size: rem(16px);   
+                
+                @include mobile-screen {
+                    font-size: 16px;
+                }
+            }
+            // QUANTITY 
+            p{
+                font-style: normal;
+                font-weight: 500;
+                font-size: rem(16px);
+                line-height: rem(16px);                      
+                color: #4F4F4F;
+                text-align: end;
+                margin-right: 8px !important;
+
+                @include mobile-screen {
+                    font-size: 16px !important;
+                    line-height: 16px !important; 
+                }
+            }
+
+            &:last-child {
+                padding-bottom: 0 !important;
+            }
+        }
+    }
+
+}

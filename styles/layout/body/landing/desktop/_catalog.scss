@@ -1,0 +1,244 @@
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+
+.landing-catalog-wrap{
+    background-color: var(--landing-main-bg) !important;
+    padding: rem(71px) rem(255px);
+
+    @include ultra-large {
+        padding: rem(71px) rem(75px);
+    }
+
+    @media only screen and (max-width: 1700px){
+        padding: rem(71px) rem(55px);
+    }
+
+    @media only screen and (max-width: 1500px){
+        padding: rem(71px) 0;
+        padding-left: 20px;
+    }
+
+    @include mobile-ultrasmall {
+        padding: 0;
+        background-color: var(--main-text-color) !important;
+    }
+
+    h3 {
+        margin-bottom: rem(42px) !important;
+
+        @include mobile-ultrasmall {
+            font-style: normal !important;
+            font-weight: bold !important;
+            font-size: 36px !important;
+            line-height: 143.2% !important;
+            text-align: center !important;
+            text-transform: uppercase !important;
+        }
+    }
+
+    .landing-catalog--grid {
+        display: grid;
+        grid-template-columns: repeat(5, rem(263.7px));
+        grid-template-rows: repeat(3, rem(136px));
+        gap: rem(22.29px);
+
+        @include ultra-large {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, rem(150px));
+            gap: rem(30.29px);
+        }
+
+        @media only screen and (max-width: 1500px){
+            gap: rem(10px);
+        }
+
+        @include medium-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @include mobile-ultrasmall {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media only screen and (min-width: 1401px){
+            div:first-child{
+                grid-row: 1/3;
+                grid-column: 1/2;
+                padding-left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                >img {
+                    max-width: 130px;
+                    max-height: 156px;
+                    width: auto;
+                    height: auto;
+                    margin-bottom: 22px;
+                }
+    
+            }       
+        }
+        
+        div{
+            @include dflex($jc: flex-start);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            background:var(--catalog-element-bg);
+
+            >img {
+                max-height: 95px;
+                max-width: 81px;
+                width: auto;
+                height: auto;
+                padding: 8px 1px 1px 12px;
+
+                @include ultra-large {
+                    max-height: rem(95px);
+                    max-width: rem(81px);
+                }
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;               
+                text-transform: uppercase;
+                text-align: left;
+                padding-left: 10px;
+
+                @include ultra-large {
+                    font-size: rem(16px);
+                    line-height: rem(20px);
+                }
+            }
+  
+            // BUTTON
+            @include arrowleft-btn(45px);
+            // mobiles styles
+            @include mobile-ultrasmall {
+                a{
+                    display: none;
+                }
+            }
+
+            &:hover{
+                background-color: var(--main-text-color);
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+
+                a{
+                    background-color: var(--main-black-color);
+                    img{
+                        filter: var(--svg-white-color);
+                    }
+                }
+
+               
+                // mobile styles for the button size
+                @include mobile-ultrasmall {
+                    p{
+                        font-weight: bold;
+                    }
+                
+                    a{
+                        display: block;
+                        position: absolute;
+                        @include dflex;
+                        min-width: 40px;
+                        min-height: 56px;
+                        width: 40px;
+                        height: 56px;
+                        right: 0;
+                        bottom: 0;
+                        transition: all 0.3s ease-in-out;
+                        background-color: var(--main-black-color);
+                        img{
+                            filter: var(--svg-white-color);
+                        }
+                    }
+                }
+            }
+
+            // CHANGIN GRID TO SMALLER SCREEN
+            @include medium-screen {
+                flex-basis: 25%;
+                height: rem(272px);
+                min-width: rem(263.7px);
+                margin: 10px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                >img {
+                    max-width: 130px;
+                    max-height: 156px;
+                    width: auto;
+                    height: auto;
+                    margin-bottom: 0;
+                    padding-top: 75px;
+                }
+
+                p{
+                    margin-bottom: rem(50px) !important;
+                }
+            }
+
+            @include small-screen {
+                >img {
+                    max-width: 100px;
+                    max-height: 129px;
+                    padding-top: 50px;
+                }
+            }
+
+            // MOBILES STYLES
+            @include mobile-ultrasmall {
+                flex-basis: auto !important;
+                flex-direction: row;
+                align-items: center;
+                min-width: auto;
+                min-height: auto;
+                height: 56px !important;
+                width: 100%;
+                padding: 0 !important;
+                margin: 0 !important;
+                border-top: 1px solid #D5D5D5;
+
+                &:last-child {
+                    border-bottom: 1px solid #D5D5D5;
+                }
+                >img {
+                    max-height: 50px;
+                    max-width: 58px;
+                    width: auto;
+                    height: auto;
+                    padding: 8px 1px 1px 12px;
+                }
+    
+                p {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    flex: 4;
+                    text-transform: lowercase;
+                    padding-left: 16px;
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        @include medium-screen {
+            div:first-child {
+                flex-basis: 25%;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import '../../utilities/mixins';
+
+header {
+	background-color: var(--main-black-color);
+	color: var(--main-text-color);
+	display: flex !important;
+}
+
+.kob {
+    &-logo {
+        padding: 1.3125rem 0 1.625rem 5rem;
+        flex: 1;
+        cursor: pointer;
+        display: block;
+
+        a{
+            text-decoration: none;
+            background-color: transparent;
+
+            img {
+                display: block;
+                max-width: 14.31rem;
+                width: auto;
+                height: auto;
+
+                @include medium-screen {
+                    max-width: 180px;
+                }
+            }
+        }
+	}
+	
+	&-header-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--main-black-color);
+        padding: 0.25rem 5rem 0.25rem 2rem;
+    }
+}
+
+@import './desktop/logo';
+@import './desktop/center';
+@import './desktop/catalogDrop';
+@import './desktop/right';
+@import './desktop/dropdownSelect';
+@import './desktop/dropdownLogin';
+@import './medias';
+@import './mobile/mobile';
+

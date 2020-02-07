@@ -1,0 +1,141 @@
+// add into XXX-pangination div
+
+@mixin pangination {
+    @include dflex;
+    margin-top: rem(42px);
+
+    >nav {
+        width: 100%;
+        ul {
+            margin-bottom: 0 !important;
+            @include dflex;
+
+            a{
+                &:focus{
+                    box-shadow: none !important;
+                }
+            }
+
+            .active {
+                .page-link{
+                    color: #4C4C4C;  
+                }
+            }
+
+            .page-item{
+                outline: 0 !important;
+            }
+            >li{
+
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6){                              
+                    margin-right: 9.1px;
+
+                    @media only screen and (max-width: 500px){
+                        margin-right: 3px;
+                    }  
+
+                    a{
+                        width: rem(45px);
+                        height: rem(45px);  
+                        border: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #4C4C4C;
+                        border: 1px solid #DADADA !important;
+                        @include dflex;
+
+                        @media only screen and (max-width: 500px){
+                            width: 18px;
+                            height: 18px;  
+                        }    
+                    }
+                }
+
+                // prev i sled 
+                &:first-child,
+                &:last-child {
+                    @include dflex;
+                    a{
+                        border: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #4C4C4C !important;
+
+                        @media only screen and (max-width: 500px){
+                            @include dflex;
+                            padding: 0.5rem 0.25rem !important;
+                        }                        
+                    }
+
+                    img {
+                        margin: 0 9px 3px 9px;
+
+                        @media only screen and (max-width: 500px){
+                            margin: 0 3px 0 3px;
+                        }   
+                    }
+                }
+
+                // 1st element's margin
+                &:first-child{
+                    margin-right: 9.1px;
+
+                    @media only screen and (max-width: 500px){
+                        margin-right: 0px;
+                    }  
+                }
+
+            }
+            >.active {
+                a{
+                    background: #F5F5F5 !important;
+                }
+            }
+
+            .disabled{
+                a{
+                    color:#949797 !important;
+                }
+
+                img {
+                    filter: invert(68%) sepia(6%) saturate(106%) hue-rotate(131deg) brightness(87%) contrast(91%) !important;
+                }
+            }
+        }
+    }
+    
+}
+
+
+// <div class="XXX--pagination">
+// <nav aria-label="...">
+//     <ul class="pagination">
+//       <li class="page-item disabled">
+//         <a href="#" class="page-link">
+//             <img src="/styles/layout/body/catalog/images/desktop/body/arrowleft.svg" alt="left">
+//             Предыдущая
+//         </a>
+//       </li>
+//       <li class="page-item active"><a class="page-link" href="#">1</a></li>
+//       <li class="page-item">
+//         <a class="page-link" href="#">2</a>
+//       </li>
+//       <li class="page-item"><a class="page-link" href="#">3</a></li>
+//       <li class="page-item"><a class="page-link" href="#">4</a></li>
+//       <li class="page-item"><a class="page-link" href="#">5</a></li>
+//       <li class="page-item">
+//         <a class="page-link" href="#">
+//             Следующая 
+//             <img src="/styles/layout/body/catalog/images/desktop/body/arrowright.svg" alt="right"></a>
+//       </li>
+//     </ul>
+// </nav>
+// </div>

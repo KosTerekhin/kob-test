@@ -1,0 +1,7 @@
+@import '../../../../../templates/product/productSingle';
+@import '../../../../../templates/product/fiveProductsRow';
+
+.accountfavourites--items {
+   @include five-products;        
+
+}

@@ -1,0 +1,88 @@
+@import '../../../../../templates/input/input';
+@import '../../../../../templates/checkmark/checkmark';
+
+.conf-info-right {
+    width: 48.5%;
+
+    @include small-screen{
+        width: 100%;
+    }
+
+    >div{
+        margin-bottom: 11px;
+
+        &:nth-of-type(1){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 20px;
+
+            >a{
+
+                @include buy-button-white(48%, 45px, 14px, 17px);
+                >p{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // active class for buttons
+        .active{
+            background-color: var(--secondary-black-color) !important;
+            border: none !important;
+    
+            >p{
+                @include clear-link(var(--main-text-color));
+            }
+        }
+
+        &:nth-of-type(2),
+        &:nth-last-of-type(1){
+            @include cart-input-gray;
+        }
+
+    }
+    #address-pickup{
+
+        >p{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--product-gray-color);        
+            
+            padding-left: 10px;
+        }
+
+        >span{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: rem(45.39px);
+
+            @media only screen and (max-width: 374px){
+               height: auto;
+            }
+
+            >p {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 38px;
+                color: var(--secondary-black-color);        
+                
+                padding-left: 10px;  
+                white-space: nowrap;      
+                
+                @media only screen and (max-width: 374px){
+                    white-space: normal;
+                    padding-left: 0;
+                    line-height: 25px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

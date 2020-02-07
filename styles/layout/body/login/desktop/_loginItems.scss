@@ -1,0 +1,19 @@
+@import '../../../../templates/input/input';
+@import '../../../../templates/buttons/buyButton';
+@import '../../../../templates/checkmark/checkmark';
+
+
+.login---row{
+    >div{
+        @include cart-input-gray;
+    }
+
+    a{
+        @include buy-button-white(100%, 45px, 14px, 17px);
+        >p{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+

@@ -1,0 +1,669 @@
+@mixin five-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 34px;
+    
+    .item-border {
+        flex-basis: 20%;
+        padding: rem(7px) 0;  
+
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // setting up border
+        border-bottom: 0.930107px solid #DBDBDB;
+        border-right: 0.930107px solid #DBDBDB;
+
+        &:nth-of-type(5n) {
+            border-right: none;
+        }
+
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2),
+        &:nth-last-of-type(3), 
+        &:nth-last-of-type(4),
+        &:nth-last-of-type(5)
+        {
+            border-bottom: none;
+        }
+
+        @include mobile-screen {
+            flex-basis: 25%;
+        }
+
+        @include mobile-screen {
+
+            &:nth-of-type(5n) {
+                border-right: 0.930107px solid #DBDBDB; 
+            }
+
+            &:nth-last-of-type(1),
+            &:nth-last-of-type(2),
+            &:nth-last-of-type(3), 
+            &:nth-last-of-type(4),
+            &:nth-last-of-type(5)
+            {
+                border-bottom: 0.930107px solid #DBDBDB; 
+            }
+
+            &:nth-of-type(4n) {
+                border-right: none; 
+            }
+    
+            &:nth-last-of-type(1),
+            &:nth-last-of-type(2),
+            &:nth-last-of-type(3),
+            &:nth-last-of-type(4)
+            {
+                border-bottom: none; 
+            }
+
+            &:nth-last-of-type(1)
+            {
+                border-right: none; 
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            flex-basis: 50%;
+        }
+
+        @media only screen and (max-width: 767px) {
+
+            &:nth-of-type(4n) {
+                border-right: 0.930107px solid #DBDBDB;
+            }
+    
+            &:nth-last-of-type(1),
+            &:nth-last-of-type(2),
+            &:nth-last-of-type(3),
+            &:nth-last-of-type(4)
+            {
+                border-bottom: 0.930107px solid #DBDBDB;
+            }
+
+            &:nth-of-type(2n) {
+                border-right: none; 
+            }
+    
+            &:nth-last-of-type(1),
+            &:nth-last-of-type(2)
+            {
+                border-bottom: none; 
+            }
+
+        }
+        @media only screen and (max-width: 424px) {
+            flex-basis: 100%;
+        }
+
+        @media only screen and (max-width: 424px) {
+            &:nth-of-type(2n) {
+                border-right: 0.930107px solid #DBDBDB;
+            }
+    
+            &:nth-last-of-type(2)
+            {
+                border-bottom: 0.930107px solid #DBDBDB;
+            }
+
+            border-right: none !important;
+
+        }
+
+        // single product 
+        @include product-single;
+    }
+}
+
+@mixin five-products-row {
+
+    // should be on top
+
+    // .XXX-main-wrap    {
+    //     margin: rem(19px) rem(226px) 0 rem(261px);
+    //     display: flex;
+    //     flex-direction: column;
+    //     height: auto;
+    
+    //     @media only screen and (max-width: 1700px){
+    //         margin: rem(19px) rem(55px) 0 rem(55px);
+    //     }
+    
+    //     @media only screen and (max-width: 1500px){
+    //         margin: rem(19px) rem(20px) 0 rem(20px);
+    //     }
+    // }    
+
+    .XXX-wrap {
+        width: 100%;
+        h3 {
+            font-style: normal !important;
+            font-weight: bold !important;
+            font-size: rem(42px) !important;
+            line-height: rem(60px) !important;
+            text-align: center !important;
+            text-transform: uppercase !important; 
+
+            margin-bottom: 23px !important;
+        }
+        
+        .XXX-items {
+           
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                .item-border {
+                    flex-basis: 20%;
+                    padding: rem(7px) 0;  
+            
+                    @include mobile-screen {
+                        flex-basis: 25%;
+                    }
+            
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+            
+                    // setting up border
+                    border-bottom: 0.930107px solid #DBDBDB;
+                    border-right: 0.930107px solid #DBDBDB;
+            
+                    &:nth-of-type(5n) {
+                        border-right: none;
+                    }
+            
+                    &:nth-last-of-type(1),
+                    &:nth-last-of-type(2),
+                    &:nth-last-of-type(3), 
+                    &:nth-last-of-type(4),
+                    &:nth-last-of-type(5)
+                    {
+                        border-bottom: none;
+                    }
+            
+                    @include mobile-screen {
+            
+                        border-bottom: 0.930107px solid #DBDBDB !important;
+                        border-right: 0.930107px solid #DBDBDB !important;
+            
+                        &:nth-of-type(4n) {
+                            border-right: none !important;
+                        }
+                
+                        &:nth-last-of-type(1),
+                        &:nth-last-of-type(2)
+                        {
+                            border-bottom: none !important;
+                        }
+            
+                        &:nth-last-of-type(1)
+                        {
+                            border-right: none !important;
+                        }
+                    }
+            
+                    // single product 
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-end;
+                
+                        position: relative;
+                        max-width: rem(262.29px);
+                        max-height: rem(427.85px);
+                        // width: rem(262.29px);
+                        height: rem(427.85px);
+                
+                        transition: all ease-in-out 0.3s;
+                
+                        >p:first-child {
+                            display: none;
+                        }
+                
+                        .novinka-active{
+                            display: flex !important;
+                            align-items: center;
+                            justify-content: center;
+                
+                            width: rem(73.4px);
+                            height: rem(22.83px);
+                            color: var(--main-text-color);
+                            background-color: var(--secondary-black-color);
+                
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: rem(13.0484px);
+                            line-height: rem(15px);
+                            text-transform: capitalize;
+                
+                            position: absolute;
+                            left: 0;
+                            top: rem(22.32px);
+                        }
+                        // main img
+                        >img {
+                            max-width: rem(240.9px);
+                            max-height: rem(179.51px); 
+                            margin-bottom: rem(36px);
+                
+                            width: auto;
+                            height: auto;
+                            
+                            transition: all ease-in-out 0.3s;
+                        }
+                        // product name and price
+                        >p {
+                            &:nth-of-type(2){
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: rem(15.8118px);
+                                line-height: rem(19px);
+                                text-align: center;
+                                letter-spacing: -0.04em;
+                                color: var(--secondary-black-color);
+                            }
+                            &:nth-of-type(3){
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: rem(20.4624px);
+                                line-height: rem(29px);
+                
+                                text-align: center;
+                                color: var(--secondary-black-color);
+                
+                                margin-top: rem(24.18px) !important;
+                            }
+                        }
+                        // bottom part
+                        >div{
+                            width: 100%;
+                            // regular item 
+                            div{
+                               
+                                &:first-child{
+                                    border-top: 0.930107px solid #DBDBDB;
+                                    margin: 0 rem(14px);
+                                    width: auto;
+                                    margin-top: rem(9px);
+                
+                                    transition: all ease-in-out 0.3s;
+                                    p{
+                                        &:first-child{
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: rem(11.7885px);
+                                            line-height: rem(13px);
+                                        
+                                            text-align: center; 
+                
+                                            margin-top: rem(7.52px) !important;
+                                            margin-bottom: rem(3.73px) !important;
+                                        }
+                                        &:last-child{
+                                            font-style: normal;
+                                            font-weight: normal;
+                                            font-size: rem(13.0215px);
+                                            line-height: rem(16px);
+                                            color: #8B8B8B;
+                
+                                            text-align: center; 
+                
+                                            margin-bottom: rem(8.37px) !important;
+                                        }
+                                    }
+                                }
+                                // hover element
+                                &:last-child {
+                                    position: absolute;
+                                    z-index: -10;
+                                    opacity: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    transform: translateY(50%);
+                                    
+                                    background-color: var(--secondary-black-color);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                
+                                    margin-top: rem(11px);
+                                    transition: all ease-in-out 0.3s;
+                
+                                    >img {
+                                        filter: --svg-black-color;
+                                        background-color: var(--main-text-color);
+                                        
+                                        border-radius: 50%;
+                
+                                        &:first-child{
+                                            padding: rem(9px) rem(8.3px);
+                                            margin-left: rem(17px);
+                
+                                            @include medium-screen {
+                                                margin-left: rem(10px);
+                                            }
+                
+                                            @include small-screen {
+                                                padding: rem(8px) rem(7.6px);
+                                            }
+                                        }
+                
+                                        &:nth-child(2) {
+                                            padding: rem(8.5px) rem(9px);
+                
+                                            @include small-screen {
+                                                padding: rem(7.3px) rem(8px);
+                                            }
+                                        }
+                                    }
+                
+                                    >a {
+                                            position: relative;
+                                            font-style: normal;
+                                            font-weight: bold;
+                                            font-size: rem(13.0484px);
+                                            line-height: rem(18px);
+                                            @include dflex;
+                
+                                            color: var(--secondary-black-color);
+                                            background-color: var(--main-text-color);
+                
+                                            padding: rem(6.2px) rem(52px) !important;
+                                            margin: rem(9.3px) rem(18.66px) rem(8.98px) 0 !important;
+                                            >img {
+                                                position: absolute;
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                
+                        // HOVER EFFECT
+                        &:hover {
+                            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+                
+                            >img {               
+                                // max-width: rem(313.38px);
+                                max-height: rem(231.84px); 
+                                margin-bottom: rem(20px);  
+                                width: auto;    
+                            }
+                
+                            >div {
+                
+                                div {                
+                                    &:first-child{
+                                        position: absolute;
+                                        z-index: -10;
+                                        opacity: 0;
+                                        left: 0;
+                                        bottom: 0;
+                                        transform: translateY(50%);
+                                    }
+                
+                                    &:last-child{
+                                        position: static;
+                                        z-index: 0;
+                                        opacity: 1;
+                
+                                        transform: translateY(0%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+
+
+// <div class="XXX-wrap">
+// <h3>товары</h3>
+// <div class="XXX-items">
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">Под заказ</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">Ожидается</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="item-border">
+//         <div>
+//             <p class="novinka-active">новинка</p>
+//             <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//             <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//             <p>15 040 грн</p>   
+//             <div>
+//                 <div>
+//                     <p id="product-name">В наличии</p>
+//                     <p>Код:LDDAVE8XSW</p>
+//                 </div>
+//                 <!-- hover  -->
+//                 <div >
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                     <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                     <a href="#" >  
+//                         Купить  
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="historypage---more">
+//     <a href="#">
+//         <img src="./styles/layout/body/catalog/images/desktop/body/show.svg" alt="circles">
+//         ПОКАЗАТЬ ВСЁ
+//     </a>
+// </div>
+// </div>

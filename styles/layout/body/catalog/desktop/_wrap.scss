@@ -1,0 +1,54 @@
+@import '../../../../utilities/colors';
+@import '../../../../utilities/fonts';
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+
+@import './menu/menu';
+@import './body/body';
+@import './bottom/bottom';
+@import '../mobile/menuMobile';
+
+@import '../components/menuCheckmark';
+
+.catalogpage-main-wrap {
+    margin: rem(52px) rem(226px) 0 rem(261px);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    @media only screen and (max-width: 1700px){
+        margin: rem(52px) rem(55px) 0 rem(55px);
+    }
+
+    @media only screen and (max-width: 1500px){
+        margin: rem(52px) rem(20px) 0 rem(20px);
+    }
+
+    @include small-screen {
+        margin: 36px 2% 0 2%;
+    }
+    
+    .catalogpage--divider {
+        width: 100%;
+        display: flex;
+        .catalogpage---menu {
+            @include catalog--menu;
+        }
+        .catalogpage----menu-mobile {
+            @include catalogpage----menu-mobile;
+        }
+        .catalogpage---body{
+            @include body--items;
+        }
+
+        @include mobile-screen {
+            flex-direction: column;
+        }    
+    }
+
+    .catalogpage--bottom {
+        @include bottom;
+        align-self: center;
+        margin-top: rem(162px);
+    }
+} 

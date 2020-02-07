@@ -1,0 +1,82 @@
+@mixin checkmark {
+    // CUSTOM CHECK BOX
+    .productpage----checkmark {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        margin-top: rem(17px) !important;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(16px);
+        line-height: rem(23px);
+        color: var(--secondary-black-color);
+
+        @include mobile-screen {
+            font-size: 15.4711px !important;
+            line-height: 22px !important;
+
+            .checkmark {
+                top: 0;
+                left: 0;
+
+                @media (max-width:551px){
+                    transform: translateY(50%);                            
+                }
+            }
+
+        }
+    }
+    /* Hide the browser's default checkbox */
+    .productpage----checkmark input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 22px;
+        width: 22px;
+        background-color: var(--main-text-color);
+        border: 1px solid var(--product-border);
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .productpage----checkmark:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+             
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .productpage----checkmark input:checked ~ .checkmark::after {
+        display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .productpage----checkmark .checkmark::after {
+        left: 8px;
+        top: 2px;
+        width: 6px;
+        height: 15px;
+        border: solid var(--main-black-color);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }     
+}

@@ -1,0 +1,23 @@
+@import '../../components/menuCheckmark';
+@import '../../components/moreMenuButton';
+@import './menuCatalog';
+@import './menuProizvDost';
+
+
+@mixin catalog--menu {
+
+    background-color: var(--main-text-color);
+    width: 23.5%;
+    padding-right: 15px;
+    // CATALOG STYLES
+    @include menu-catalog-block;
+
+    // proizvoditeli styles
+    // dostupnost styles
+    @include menu-proizvoditeli-dostupnost;
+    
+
+    @include mobile-screen {
+        width: 100%;
+    }
+}

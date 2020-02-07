@@ -1,0 +1,104 @@
+.kob {
+    
+    &-header-right-top {
+        display: flex;
+        justify-content: space-between;
+        height: 1.8rem;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    // BOTTOM PART
+
+    &-header-right-bottom {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
+    &-header-socialmedia {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            cursor: pointer;
+            img{
+                width: 2.18rem;
+                height: 2.18rem;
+            }
+        }
+    }
+
+    &-header-icons {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-left: 3rem;
+        justify-content: space-between;
+
+        p {
+            position: absolute;
+            font-size: 11.2px;
+            color: var(--main-black-color);
+            top: 3px;
+            right: 12px;
+            background-color: var(--main-text-color);
+            border-radius: 50%;
+            padding: 0px 5px 0px 5px;
+        }
+    }
+    
+    &-header-cart {
+        position: relative;
+        padding-right: 0.5rem;
+        width: 45px;
+        height: 45px;
+        background-color: var(--cart-box-color);
+        border-radius: 50%;
+
+        img {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            padding: 3px 9.5px;
+            top: 0;
+            right: 1px;
+        }
+
+        p {
+            position: absolute;
+            top: -4px;
+            right: 1px;
+            font-size: 11.2px;
+            color: var(--main-black-color);
+            background-color: var(--main-text-color);
+            border-radius: 50%;
+            padding: 0px 5px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }       
+    }
+
+    &-header-compare {
+        position: relative;
+        padding-right: 0.5rem;
+
+        img {
+            padding: 10px;
+            background-color: var(--main-black-color);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    &-header-mobile {
+        display: none;
+        position: relative;
+    }
+
+}

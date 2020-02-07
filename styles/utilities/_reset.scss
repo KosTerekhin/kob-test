@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0 !important; 
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "Segoe UI";
+}
+
+.owl-dot{
+    &:focus{
+        outline: 0;
+    }
+}
+
+.owl-nav{
+    >button{
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+
+.no-display{
+    display: none !important;
+}
+
+.desktop {
+    @include mobile-ultrasmall {
+        display: none !important;
+    }
+}
+
+.desktop900 {
+    @include mobile-screen {
+        display: none !important;
+    }
+}
+
+.mobile-flex {
+    display: none;
+
+    @include mobile-ultrasmall {
+        display: flex !important;
+    }
+}
+
+.mobile-block {
+    display: none;
+
+    @include mobile-ultrasmall {
+        display: block !important;
+    }
+}
+
+.tablet-flex {
+    display: none;
+
+    @include mobile-screen {
+        display: flex !important;
+    }
+}
+
+.tablet-block {
+    display: none;
+
+    @include mobile-screen {
+        display: block !important;
+    }
+}

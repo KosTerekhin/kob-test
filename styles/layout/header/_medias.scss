@@ -1,0 +1,193 @@
+.kob {
+    &-logo {
+        @media only screen and (max-width: 1500px){
+            padding-left: 3rem;
+        }
+
+        @media only screen and (max-width: 1350px){
+            padding-left: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        @media only screen and (max-width: 1050px){
+            padding-left: 0.5rem;
+            img{
+                height: 3.13rem !important; 
+            }
+        }
+    }
+    &-header-right {
+        @media only screen and (max-width: 1500px){
+            padding-right: 2rem;
+        }
+        @media only screen and (max-width: 1400px){
+            padding-right: 1rem;
+		    padding-left: 0.5rem;
+        }
+        @media only screen and (max-width: 1050px){
+            padding-right: 1rem;
+            padding-left: 0;
+        }
+    }
+
+    &-header-icons {
+        @media only screen and (max-width: 1800px){
+            margin-left: 1rem;
+        }
+        @media only screen and (max-width: 1400px){
+            margin-left: 0.5rem;
+        }
+        @media only screen and (max-width: 1300px){
+            margin-left: 0;
+		    justify-content: space-around;
+        }
+        @media only screen and (max-width: 1050px){
+            margin-left: 0;
+        }
+    }
+
+    &-header-compare{ 
+        @media only screen and (max-width: 1300px){
+            img {
+                padding: 10px 11px;
+                height: 50px;
+                width: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1050px){
+            img {
+                padding: 10px 11px;
+                height: 45px;
+                width: 45px;
+            }
+            p {
+                top: 1px;
+                right: 10px;
+            }
+        }
+    }
+
+    &-header-cart{
+        @media only screen and (max-width: 1300px){
+            height: 40px;
+            width: 40px;
+            
+            img{
+                padding: 0px 8px;
+                height: 40px;
+                width: 40px; 
+            }
+        }
+        @media only screen and (max-width: 1050px){
+            height: 35px;
+            width: 35px;
+            
+            img{
+                padding: 0px 7.5px;
+                height: 35px;
+                width: 35px;
+                right: 0.5px; 
+            }
+
+            p {
+                top: -6px;
+                right: -2px;
+            }
+        }
+    }
+
+    &-catalog-dropdown{
+        @media only screen and (min-width: 1950px){
+            left: -82%;
+        }        
+        @media only screen and (max-width: 1400px){
+            left: -148%;
+        }        
+    }
+
+    &-catalog-dropdown-items{
+        @media only screen and (min-width: 1950px){
+            div{
+                left: 118%;
+            }
+
+            span{
+                leftarrow {
+                    left: -131px;
+                } 
+                hoverarea{
+                    top: -4px;
+                    right: -262px;                   
+                }
+            }
+        }
+        @media only screen and (max-width: 1400px){
+            div{
+                left: 256px; 
+                top: -24px;
+            }
+
+            span{
+                leftarrow {
+                    left: -132px;
+                    top: 10px;
+                } 
+                hoverarea{
+                    top: -4px;
+                    right: -325px;                   
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1050px){
+
+        }
+    }
+
+    &-header-right-bottom{
+        @media only screen and (max-width: 1050px){
+            margin-bottom: 0;
+        }
+    }
+
+    &-header-center{
+        @media only screen and (max-width: 1050px){
+            flex: 4;
+        }
+    }
+
+    &-header-socialmedia{
+        @media only screen and (max-width: 1050px){
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-header-center-bottom{
+        @media only screen and (max-width: 1050px){
+            justify-content: space-evenly;
+        }
+    }
+
+    &-header-search-div{
+        @media only screen and (max-width: 1050px){
+            flex: 2;
+		    height: 35px;
+        }
+    }
+
+    &-header-catalog-wrapper{
+        @media only screen and (max-width: 1050px){
+            padding: 0;
+
+            i:last-child {
+                padding-top: 5px;
+                padding-left: 9px;
+            }
+        }
+    }
+
+    
+}

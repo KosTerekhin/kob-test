@@ -1,0 +1,193 @@
+@mixin mobile-slider-arrows {
+    >.carousel {
+        margin: 0 !important;
+        padding-right: 30px !important;
+
+        .carousel-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: rem(73px);
+
+            .carousel-item {
+                margin-top: rem(44px) !important;
+
+                p{
+                    color: var(--landing-text-color);
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(18px);
+                    line-height: rem(22px); 
+                    width: rem(361px);
+                    text-align: left;
+
+                    @include small-screen {
+                        width: rem(280px);
+                    }
+
+                    @include mobile-ultrasmall{
+                        font-size: 16px;
+                        line-height: 22px;
+                        width: 100% !important;
+                        padding-right: 20px !important;
+                    }
+                }
+        
+                h3 {   
+                    text-align: left;
+                    color: var(--main-black-color);
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: rem(44px) !important;
+                    line-height: rem(63px)!important;
+                    text-transform: uppercase;  
+                    margin-bottom: rem(24px) !important;
+
+                    @include mobile-ultrasmall{
+                        font-size: 36px !important;
+                        line-height: 143.2% !important;
+                    }
+                }
+
+                >img {
+                    width: rem(396px);
+                    height: rem(353px);
+
+                    @include medium-screen {
+                        width: 310px;
+                        height: 269px;
+                    }
+                    @include mobile-ultrasmall {
+                        width: 256.68px;
+                        height: 199.39px;
+                        padding-left: 34.03px;
+                        margin-bottom: -13px !important;
+                    }
+                }
+            }
+
+            @include mobile-ultrasmall {
+                padding-left: 7px;
+            }
+        }
+
+        .carousel-control-next{
+            width: 79px;
+            height: 79px;
+            top: 90.5%;
+            right: 0;
+            background-color:#E9E9E9;
+
+            @include large-screen {
+                top: 90.5%;
+            }
+
+            @include medium-screen {
+                top: 92%;
+                width: 53px;
+                height: 53px;
+            }
+
+            @include small-screen {
+                top: 90.7%;
+            }
+            @include mobile-ultrasmall {
+                top: 88%;
+
+            }
+        }
+
+        .carousel-control-prev{ 
+            width: 79px;
+            height: 79px;
+            left : auto !important;
+            top: 90.5%;
+            right: 79px !important;
+            background-color:#E9E9E9;
+
+            @include large-screen {
+                top: 90.5%;
+            }
+
+            @include medium-screen {
+                top: 92%;
+                width: 53px;
+                height: 53px;
+                right: 53px !important;
+            }
+
+            @include small-screen {
+                top: 90.7%;
+            }
+
+            @include mobile-ultrasmall {
+                top: 88%;
+                right: 53px !important;
+            }
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url(/styles/layout/body/landing/images/slider-left.svg) !important;
+
+            @include medium-screen {
+                width: 8.72px;
+                height: 12.76px;
+            }
+        }
+        .carousel-control-next-icon {
+            background-image: url(/styles/layout/body/landing/images/top/slider-right.svg) !important;
+            
+            @include medium-screen {
+                width: 8.72px;
+                height: 12.76px;
+            }
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            left: -315px !important;
+            margin-bottom: 1.5rem !important;
+
+            li {
+                width: 22px;
+                height: 22px;
+                border: 1px solid #C4C4C4 !important;
+                border-radius: 50%;
+                background-color: transparent !important;
+
+                @include small-screen {
+                    width: 17.26px;
+                    height: 17.26px;
+                }
+            }
+                
+            .active {
+                background-color: #C4C4C4 !important;
+            }
+
+            @include large-screen {
+                left: rem(-190px) !important;
+            }
+
+            @include medium-screen {
+                margin-bottom: 1.2rem !important;
+            }
+            @include small-screen {
+                margin-bottom: 1.4rem !important;
+            }
+            @include mobile-ultrasmall {
+                margin-bottom: 1.6rem !important;
+                left: -206px !important;
+            }
+
+        
+        }
+        @include mobile-ultrasmall {
+            max-width: 320px;
+            height: 100%;
+        }
+    
+    }
+}

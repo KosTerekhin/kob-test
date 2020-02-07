@@ -1,0 +1,138 @@
+@mixin donwload-single {
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile-screen {
+            flex-direction: column;
+            // align-items: flex-start;
+        }
+
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // left side
+            &:first-child {
+                img {
+                    filter: --svg-gray-color-history;
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-right: rem(16px);
+                    };            
+                }
+        
+                >p {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: rem(22px);
+                    line-height: rem(42px); 
+                    color: var(--secondary-black-color);
+                    align-self: flex-start;
+                    white-space: nowrap;
+
+                    @include small-screen {
+                        white-space: normal;
+                        align-self: center;
+                    }
+                }
+            }
+
+            // right side divs
+            &:last-child{
+                div {
+                    display: flex;
+                    justify-content: center;
+        
+                    &:nth-of-type(1) {
+                        margin-right: rem(37px);
+                        cursor: pointer;
+                        >p {
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: rem(16.676px);
+                            line-height: rem(20px);
+                            color: var(--history-main-gray);
+                        }
+        
+                        >img {
+                            margin-right: rem(3px);
+                        }
+
+                        @include mobile-screen {
+                            margin-top: 10px;
+                        }
+                    }
+        
+                    &:nth-of-type(2),
+                    &:nth-of-type(3){
+                        width: 181px;
+                        height: 45px;
+                        align-items: center;
+                        border: 1px solid var(--secondary-black-color);
+                        cursor: pointer;
+                        >img {
+                            filter: --svg-282828-black;
+                            margin-right: rem(6px);
+                        }
+        
+                        >p{
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: rem(18px);
+                            line-height:rem(21px);
+                            text-transform: uppercase;
+                            color: var(--history-secondary-black);                   
+                        }
+
+                        &:hover{ 
+                            background-color: var(--main-black-color);
+                            border: 1px solid var(--main-text-color);  
+                            
+                            p{
+                                color: var(--main-text-color);
+                            }
+
+                            img {
+                                filter: var(--svg-white-color);
+                            }
+                        }
+                        @include mobile-screen {
+                            margin-top: 10px;
+                        }
+                    }
+        
+                    &:nth-of-type(2){
+                        margin-right: rem(14px);
+
+                        @include mobile-screen {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                @include mobile-screen {
+                    width: 100%;
+                    flex-direction: column;
+
+                    div {                        
+                        &:nth-of-type(2),
+                        &:nth-of-type(3){
+                            width: 60%;
+
+                            >img {
+                                margin-right: 0;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}

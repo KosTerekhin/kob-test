@@ -1,0 +1,24 @@
+@import '../../../../../utilities/colors';
+@import '../../../../../utilities/mixins';
+@import '../../../../../utilities/functions';
+
+.historypage-logo {
+    width: 100%;
+    max-height: rem(712.28px);
+    height: rem(712.28px);
+    margin-bottom: rem(65px);
+
+    @include dflex;
+    @include bg(url('/styles/layout/body/history/images/logobg.jpg'));
+
+    img {
+        filter: var(--svg-white-color);
+    }
+
+    @include mobile-ultrasmall {
+        img {
+            width: 90%;
+        }
+    }
+
+}

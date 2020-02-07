@@ -1,0 +1,46 @@
+@mixin catalogpage----more {
+    text-decoration: none !important;
+    background-color: var(--main-text-color) !important;
+    color: var(--main-black-color) !important;
+    border: 1px solid var(--main-black-color) !important;
+    border-radius: 0 !important;
+    box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.1);
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(18px) !important;
+    line-height: rem(21px) !important;
+    text-transform: uppercase;
+    width: rem(316px);
+    height: rem(45.39px);
+    @include dflex;
+    transition: all 0.2s ease-in-out;
+
+    @include mobile-screen{
+        font-size: 18px !important;
+        line-height: 21px !important;   
+        height: 45.39px;   
+        width: 50%;               
+    }
+
+    @media only screen and (max-width: 425px){
+        width: 96%;
+    }
+
+
+
+    img{
+        padding-right: 8px;
+        filter: var(--svg-black-color);
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover{
+        color: var(--main-text-color) !important;
+        background-color: var(--main-black-color) !important;
+        border: 1px solid var(--main-text-color) !important;  
+
+        img {
+            filter: var(--svg-white-color);
+        }
+    }
+}

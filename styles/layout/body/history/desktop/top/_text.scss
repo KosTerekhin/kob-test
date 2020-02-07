@@ -1,0 +1,21 @@
+@mixin  historypage--text {
+    
+    h3 {
+        margin-bottom: rem(34px) !important;
+        color: var(--secondary-black-color) !important;
+    }
+
+    >p{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(18px);
+        line-height: rem(29px);
+        color: var(--main-black-color);
+
+        width: 100%;
+
+        margin-bottom: rem(30px) !important;
+    }
+
+}

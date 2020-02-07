@@ -1,0 +1,57 @@
+@mixin wrap-media {
+    margin: rem(21px) rem(226px) 0 rem(261px);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    h5 {
+        margin-bottom: rem(13px) !important;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px;
+        text-transform: capitalize;
+        align-self: flex-start;
+        text-align: start;
+        color: var(--secondary-black-color);
+
+        @include small-screen {
+            padding-left: rem(30px);
+        }
+        @include mobile-ultrasmall {
+            padding-left: rem(20px);
+        }
+    }
+
+    @media only screen and (max-width: 1800px){
+        margin: rem(21px) 8.5% 0 8.5%;
+    }
+
+    @media only screen and (max-width: 1600px){
+        margin: rem(21px) 5.5% 0 5.5%;
+    }
+
+    @media only screen and (max-width: 1500px){
+        margin: rem(21px) 1.5% 0 2.5%;
+    }
+
+    @media only screen and (max-width: 1400px){
+        margin: rem(21px) 7.5% 0 7.5%;
+    }
+
+    @media only screen and (max-width: 1300px){
+        margin: rem(21px) 4.5% 0 4.5%;
+    }
+
+    @media only screen and (max-width: 1200px){
+        margin: rem(21px) 1.5% 0 1.5%;
+    }
+
+    @media only screen and (max-width: 1050px){
+        margin: rem(21px) 0.5% 0 0.5%;
+    }   
+    
+    @media only screen and (max-width: 450px){
+        overflow: hidden;
+    }   
+}

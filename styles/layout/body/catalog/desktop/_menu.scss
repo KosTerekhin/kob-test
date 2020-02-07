@@ -1,0 +1,115 @@
+@import '../../../../components/body/catalog/menuCheckmark';
+
+@mixin catalog--menu {
+    background-color: var(--main-text-color);
+    width: 100%;
+    // CATALOG STYLES
+    .catalogpage---menu-catalog {
+
+        >p {
+            @include menu-paragraph
+        }
+
+        .card {
+            border: none !important;
+        }
+
+        .card-header{
+            background: var(--main-text-color) !important;
+            padding: rem(10px) 0;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+            padding-right: 7px !important;
+            background: transparent !important;
+
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-left: 10px !important;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 500 !important;
+                font-size: rem(16px) !important;
+                line-height: rem(36px) !important;
+                color: #4F4F4F;
+                margin-right: 10px !important;
+
+                @include mobile-screen{
+                    font-size: 16px !important;
+                    line-height: 36px !important; 
+                }
+            }
+
+            img{
+               filter: --svg-black-color;
+               padding-right: 3px;
+               margin-left: 7px;
+               transition: all ease-in-out 0.15s;
+               
+            }
+
+        }
+
+        .collapsed {
+            img{
+                transform: rotate(180deg);
+                padding-right: 0px;
+                padding-left: 3px;
+            }
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            padding: rem(19px) rem(10px) rem(19px) rem(33px) !important;
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                @include menu-checkmark-mobile;
+
+                p{
+                    flex-basis: 15%;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: rem(14px);
+                    line-height: rem(16px);
+                    color: #232323;
+                    text-align: end;
+
+                    @include mobile-screen{
+                        font-size: 14px !important;
+                        line-height: 16px !important; 
+                    }
+                    
+                }
+            }
+        }     
+
+    }
+
+    // proizvoditeli styles
+    .catalogpage---menu-proizvoditeli{
+        >p {
+            @include menu-paragraph
+        }
+    }
+    // dostupnost styles
+
+    .catalogpage---menu-dostupnost{
+        >p {
+            @include menu-paragraph
+        }
+    }
+}

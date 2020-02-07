@@ -1,0 +1,156 @@
+@import './quantityBox';
+@import '../../../../../templates/buttons/buyButton';
+
+@mixin compare--display {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: rem(82px);
+
+    // Product image
+    .display-top {
+        height: rem(684px);
+        max-width: 100%;
+        width: auto;
+        @include bg(url(/styles/layout/body/product/images/productbig.svg), contain, center);
+        border: 1.17201px solid var(--product-carousel-border);
+
+        @include small-screen {
+            height: 34vh;
+         }
+    }
+
+    // product description
+    .display-bottom {
+        width: 100%;
+
+        margin-top: 54px;
+
+        >div {
+            // top part
+            &:first-child {
+
+                width: 100%;
+                // product's name
+                >h2 {
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: rem(36px);
+                        line-height: rem(40px);
+                        color: var(--secondary-black-color);  
+                        border-bottom: 1.17201px solid var(--product-carousel-border);
+
+                        padding-left: rem(21px);
+                        padding-bottom: rem(17px) !important;   
+                }
+
+                // what it includes  
+                >p{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: rem(18px);
+                    line-height: rem(22px);           
+                    letter-spacing: -0.04em;
+                    
+                    color: var(--product-gray-color);    
+                    
+                    padding-left: rem(21px);   
+                    margin-top: 15px !important;   
+                    margin-bottom: 20px !important;              
+                }
+            }
+            // middle part - availability and price
+            &:nth-of-type(2){
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 0.930107px solid var(--product-links-border);                
+                padding: rem(43px) 0 rem(25px) rem(21px);
+
+                >div {
+                    // middle-left  - availability
+                    &:first-child {
+                        flex-basis: 48%;
+                        border-right: 0.930107px solid var(--product-links-border);
+                        p {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: rem(18px);
+                            line-height: rem(22px);           
+                            letter-spacing: -0.04em; 
+                            color: var(--secondary-black-color);  
+
+                            padding-bottom: 2px;
+                        }
+                    }
+                    // middle-right - price
+                    &:last-child {
+                        flex-basis: 52%;
+                        align-self: center;
+                        text-align: center;
+                        margin-bottom: rem(16px);
+                        p{
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: rem(36px);
+                            line-height: rem(52px);
+                            color: var(--secondary-black-color); 
+                        }
+                    }
+                }
+            }
+            // bottom part - buttons
+            &:nth-last-of-type(1) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 0.930107px solid var(--product-links-border);
+                transition: all ease-in-out 0.3s;
+
+                margin-top: rem(29px);
+                padding-bottom: rem(48px);
+
+                @include small-screen {
+                   flex-direction: column;
+                }
+
+                >div{
+                    display: flex;
+                    justify-content: space-between;
+                    flex: 1;
+
+                    margin-right: 44px;
+
+                    @include small-screen {
+                        width: 100%;
+                        margin-right: 0;
+                        padding-right: 29px;
+                        margin-bottom: 10px;
+                    }
+                    
+                    >a{
+                        // delete from compare
+                        align-self: flex-start;
+                        @include buy-button-gray(261px, 51.68px, 21.7417px, 30px);
+                        height: 51.68px;  
+                        width: 70%;
+                    }
+
+                    // quantity input
+                    @include quantity;                    
+                }
+                
+                >a {
+                    // buy button
+                    align-self: flex-end;
+                    @include buy-button-black(247.87px, 51.68px, 21.7417px, 30px);
+                    height: 51.68px;
+
+                    @include small-screen {
+                        width: 100%;
+                    }
+                } 
+            }                
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import '../../components/singleCartItem';
+
+.shoppingcart---items{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--cart-border);
+    border-bottom: 1px solid var(--cart-border);
+
+    .cart----item {
+        @include cart-item
+    } 
+}

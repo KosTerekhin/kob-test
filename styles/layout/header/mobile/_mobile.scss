@@ -1,0 +1,302 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/functions'; 
+
+@media only screen and (max-width: 900px){
+
+    
+    .kob {
+        &-header-cart-mobile {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            background-color: var(--cart-box-color);
+            border-radius: 50%;
+            margin-left: 5px;
+            cursor: pointer;
+            
+            img {
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                padding: 8px 6.5px;
+            }
+            
+            p {
+                position: absolute;
+                top: -6px;
+                right: -2px;
+                font-size: 11.2px;
+                color: var(--main-black-color);
+                background-color: var(--main-text-color);
+                border-radius: 50%;
+                padding: 0px 4px;
+            }
+        }  
+        
+        &-header-cart{
+            p {
+                padding: 0px 4px;
+            }
+        }
+
+        &-logo {
+            display: none;
+        }
+
+        &-header-center {
+            display: none;
+        }
+        &-header-right {
+            display: none;
+        }
+        &-dnone {
+            display: none !important;
+        }
+
+        &-wnone {
+            width: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+        }
+        &-header-mobile {
+            display: flex !important;
+            flex-direction: column;
+            background-color: var(--main-black-color);
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+
+            a {
+                text-decoration: none;
+                background-color: transparent; 
+            }
+        }
+        &-header-mobile-wrapp-1 {
+            position: relative;
+            display: grid;
+            align-items: center;
+            justify-content: space-between;
+            height: 69px;
+            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "kob-menu-mobile kob-header-search-div-mobile kob-header-cart";
+        }
+        &-header-search-div-mobile {
+            grid-area: kob-header-search-div-mobile;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        &-header-mobile-wrapp-2 {
+            display: grid;
+            align-items: center;
+            justify-content: space-between;
+            height: 69px;
+            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "kob-menu-mobile kob-header-search-div-mobile-2 kob-header-cart";
+        }
+        &-header-search-div-mobile-2 {
+            grid-area: kob-header-search-div-mobile-2;
+            transition: all 0.3s ease-in-out;
+        }
+        &-search-area {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            input:first-child {
+                width: 22px;
+                height: 22px;
+                background-repeat: no-repeat;
+                background-image: url(/styles/layout/header/images/mobile/search.svg);
+                background-size: cover;
+                background-color: transparent;
+                box-shadow: none;
+                border: none; 
+                overflow: visible;
+            }
+
+        }
+        &-header-search-input-mobile {
+            width: 100%;
+            height: 37px;
+            border: none;
+            background-color: var(--search-bg);
+            border: 0.025rem solid var(--search-bg);
+            color: var(--main-text-color);
+            padding: 0.6rem 3.0rem 0.6rem 1.187rem;
+            outline: 0;
+
+            &::placeholder {
+                color: var(--main-text-color);
+            }
+        }
+
+        &-magnifier-mobile-1 {
+            transition: all 0.5s ease-in-out;
+            outline: 0;
+        }
+
+        &-magnifier-mobile-2 {
+            position: absolute;
+            top: 8px;
+            right: 6px;
+            outline: 0;
+        }
+
+        &-header-cart {
+            grid-area: kob-header-cart;
+        }
+    }
+
+
+    #kob {
+        &-menu-mobile {
+            grid-area: kob-menu-mobile;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                .kob-hamburger-icon {
+                    background-color: var(--main-border-color);
+                }
+
+                p {
+                    color: var(--main-border-color);
+                }
+            }
+        }
+    }
+
+
+    .kob {
+        &-hamburger-icon {
+            width: 28px;
+            height: 3px;
+            background: url('/images/mobile/hamburger.svg'), cover;
+            background-color: var(--main-text-color);
+            margin-top: 5px;
+        }
+
+        &-header-cart {
+            margin: 0 1.5rem;
+        }
+
+        &-header-sidemenu-mobile {
+            background-color: var(--main-black-color);
+            border-top: 0.125rem solid var(--main-border-color);
+            font-size: 1.8rem;
+            transform: translateX(0vh);
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            width: 100%;
+            top: 68px;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 0.75fr 1fr 0.75fr;
+            grid-template-rows: repeat(5, 1fr) 1.5fr;
+            grid-template-areas: 
+            ". kob-sidemenu-items ." 
+            ". kob-sidemenu-items ." 
+            ". kob-sidemenu-items ." 
+            ". kob-sidemenu-items ."
+            "kob-header-login-mobile kob-header-login-mobile kob-header-login-mobile" 
+            ". kob-header-socialmedia .";
+        }
+    
+        &-sidemenu-items {
+            grid-area: kob-sidemenu-items;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+
+            a {
+                text-decoration: none;
+                background-color: transparent;
+                color: inherit;
+                cursor: pointer;
+                p {
+                    padding: 10px 0;
+                    text-transform: uppercase;
+    
+                }
+                &:hover{
+                    color: var(--main-text-color);
+                }
+            }
+
+        }
+
+        &-header-login-mobile {
+            grid-area: kob-header-login-mobile;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 0.125rem solid var(--main-border-color);
+            border-bottom: 0.125rem solid var(--main-border-color);
+            margin: 0 10px;
+
+            button,
+            a {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1.8rem !important;
+                line-height: rem(19px) !important;
+            }
+
+            button{
+                &::after{
+                    display: none;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: var(--main-text-color);
+                text-decoration: underline;
+            }
+
+            .dropdown-menu{
+                top: 47% !important;
+                left: 16px !important;
+
+                a {
+                    margin: 10px 0 !important;
+                    text-align: center !important;
+                    padding: 0 20px !important;
+                }
+            }
+
+            .arrow-up{
+                left: 64px !important;
+            }
+        }
+        &-header-socialmedia {
+            grid-area: kob-header-socialmedia;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12.5px 0;
+        }
+        &-header-socialmedia {
+            grid-area: kob-header-socialmedia;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12.5px 0;
+        }
+
+        &-sidemenu-hidden {
+            transform: translateX(-120%);
+            transition: ease-in-out 0.5s;
+        }
+    } 
+}

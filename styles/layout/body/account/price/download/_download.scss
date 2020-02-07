@@ -1,0 +1,7 @@
+@import '../../../../../templates/download/downloadColumn';
+@import '../../../../../templates/download/singleDownload';
+
+.accountprice--download{
+    @include XXX--download;
+    margin-top: rem(86px);
+}

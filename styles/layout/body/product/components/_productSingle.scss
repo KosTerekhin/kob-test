@@ -1,0 +1,213 @@
+@mixin body-item {
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        position: relative;
+        max-width: rem(262.29px);
+        max-height: rem(427.85px);
+        // width: rem(262.29px);
+        height: rem(427.85px);
+
+        transition: all ease-in-out 0.3s;
+
+        >p:first-child {
+            display: none;
+        }
+
+        .novinka-active{
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+
+            width: rem(73.4px);
+            height: rem(22.83px);
+            color: var(--main-text-color);
+            background-color: var(--secondary-black-color);
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(13.0484px);
+            line-height: rem(15px);
+            text-transform: capitalize;
+
+            position: absolute;
+            left: 0;
+            top: rem(22.32px);
+        }
+        // main img
+        >img {
+            max-width: rem(240.9px);
+            max-height: rem(179.51px); 
+            margin-bottom: rem(36px);
+
+            width: auto;
+            height: auto;
+            
+            transition: all ease-in-out 0.3s;
+        }
+        // product name and price
+        >p {
+            &:nth-of-type(2){
+                font-style: normal;
+                font-weight: 500;
+                font-size: rem(15.8118px);
+                line-height: rem(19px);
+                text-align: center;
+                letter-spacing: -0.04em;
+                color: var(--secondary-black-color);
+            }
+            &:nth-of-type(3){
+                font-style: normal;
+                font-weight: bold;
+                font-size: rem(20.4624px);
+                line-height: rem(29px);
+
+                text-align: center;
+                color: var(--secondary-black-color);
+
+                margin-top: rem(24.18px) !important;
+            }
+        }
+        // bottom part
+        >div{
+            width: 100%;
+            // regular item 
+            div{
+               
+                &:first-child{
+                    border-top: 0.930107px solid #DBDBDB;
+                    margin: 0 rem(14px);
+                    width: auto;
+                    margin-top: rem(9px);
+
+                    transition: all ease-in-out 0.3s;
+                    p{
+                        &:first-child{
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: rem(11.7885px);
+                            line-height: rem(13px);
+                        
+                            text-align: center; 
+
+                            margin-top: rem(7.52px) !important;
+                            margin-bottom: rem(3.73px) !important;
+                        }
+                        &:last-child{
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: rem(13.0215px);
+                            line-height: rem(16px);
+                            color: #8B8B8B;
+
+                            text-align: center; 
+
+                            margin-bottom: rem(8.37px) !important;
+                        }
+                    }
+                }
+                // hover element
+                &:last-child {
+                    position: absolute;
+                    z-index: -10;
+                    opacity: 0;
+                    left: 0;
+                    bottom: 0;
+                    transform: translateY(50%);
+                    
+                    background-color: var(--secondary-black-color);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    margin-top: rem(11px);
+                    transition: all ease-in-out 0.3s;
+
+                    >img {
+                        filter: --svg-black-color;
+                        background-color: var(--main-text-color);
+                        
+                        border-radius: 50%;
+
+                        &:first-child{
+                            padding: rem(9px) rem(8.3px);
+                            margin-left: rem(17px);
+
+                            @include medium-screen {
+                                margin-left: rem(10px);
+                            }
+
+                            @include small-screen {
+                                padding: rem(8px) rem(7.6px);
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            padding: rem(8.5px) rem(9px);
+
+                            @include small-screen {
+                                padding: rem(7.3px) rem(8px);
+                            }
+                        }
+                    }
+
+                    >a {
+                            position: relative;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: rem(13.0484px);
+                            line-height: rem(18px);
+                            @include dflex;
+
+                            color: var(--secondary-black-color);
+                            background-color: var(--main-text-color);
+
+                            padding: rem(6.2px) rem(52px) !important;
+                            margin: rem(9.3px) rem(18.66px) rem(8.98px) 0 !important;
+                            >img {
+                                position: absolute;
+                            }
+                    }
+                }
+            }
+        }
+
+        // HOVER EFFECT
+        &:hover {
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+
+            >img {               
+                // max-width: rem(313.38px);
+                max-height: rem(231.84px); 
+                margin-bottom: rem(20px);  
+                width: auto;    
+            }
+
+            >div {
+
+                div {                
+                    &:first-child{
+                        position: absolute;
+                        z-index: -10;
+                        opacity: 0;
+                        left: 0;
+                        bottom: 0;
+                        transform: translateY(50%);
+                    }
+
+                    &:last-child{
+                        position: static;
+                        z-index: 0;
+                        opacity: 1;
+
+                        transform: translateY(0%);
+                    }
+                }
+            }
+        }
+    }
+}

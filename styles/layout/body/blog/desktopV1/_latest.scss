@@ -1,0 +1,11 @@
+.blog--latest{
+    width: 77.5%;
+
+    @include mobile-screen{
+        width: 60%;         
+    }
+
+    @media only screen and (max-width: 425px){
+        width: 100%;
+    }
+}

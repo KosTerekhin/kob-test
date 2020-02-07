@@ -1,0 +1,24 @@
+@import '../../../utilities/mixins';
+@import '../../../utilities/fonts';
+@import '../../../utilities/colors';
+
+.footer-galery-desktop {
+    margin-top: rem(32px);
+    display: grid;
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    img {
+        max-height: 296px;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media only screen and (max-width: 1250px){
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+
+        img {
+            max-height: 450px;
+
+        }
+    }
+}

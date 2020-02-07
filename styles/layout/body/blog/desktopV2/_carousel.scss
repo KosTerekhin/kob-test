@@ -1,0 +1,17 @@
+@import '../../../../templates/product/carouselFour';
+
+.blogpage--carousel{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4{
+        align-self: flex-start;
+    }
+
+    >div{
+        width: 92%;
+        @include blogpage-carousel;
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+@import '../../../../components/body/landing/carouselNav';
+
+.landing-brands-wrap-mobile {
+    margin-top: 48px;
+    h3{
+        font-style: normal !important;
+        font-weight: bold !important;
+        font-size: 36px !important;
+        line-height: 143.2% !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+
+        margin-top: 20px !important;
+        margin-bottom: 24px !important;
+    }
+
+    @include carousel-nav-arrows;
+    .owl-dots,
+    .owl-nav{
+        bottom: -10%;
+    }
+
+    .owl-carousel{
+
+        .item {
+            display: flex !important;
+            flex-wrap: wrap;
+            align-items: stretch;
+
+            img {
+                max-height: 65px;
+                max-width: 50%;
+                width: auto;
+                height: auto;
+                margin: auto;
+                filter: var(--svg-gray-color-history);
+            }
+        }
+
+    }
+}

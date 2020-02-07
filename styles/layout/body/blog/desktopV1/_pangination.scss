@@ -1,0 +1,5 @@
+@import '../../../../templates/pangination/pangV2';
+
+.blog--pangination{
+    @include pangination;
+}

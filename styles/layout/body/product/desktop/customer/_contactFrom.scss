@@ -1,0 +1,146 @@
+@import '../../../../../templates/buttons/catalogBtn';
+@import '../../../../../layout/footer/desktop/marker';
+@import './checkmark';
+@import './input';
+
+@mixin productpage---contactus {
+    flex-basis: 50%;
+
+    @include small-screen {
+        width: 97%;
+        margin-top: rem(25px);
+    }
+
+    >h5{
+        margin-bottom: 27px !important;
+    }
+
+    >div{
+        background: var(--main-text-color);
+        border: 1.32px solid var(--product-border);
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 41px 54px 26px 54.36px;
+        margin: 0 0 0 10px;
+        max-width: 663px;
+
+        @include ultra-large {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include small-screen {
+            padding: 41px 25px 26px 25px;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include mobile-screen {
+            margin: 0 0 0 5px;        
+        }
+
+        // GRID FOR INPUTS
+        >div{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: rem(45px);
+            // ITEM LOCATIONS 
+            >div:nth-child(1){
+                grid-column: 1/2;
+            }
+
+            >div:nth-child(2){
+                grid-column: 2/3;
+            }
+
+            >div:nth-child(3){
+                grid-column: 1/3;
+            }
+
+            @include mobile-screen {
+                        grid-template-columns: 1fr;
+                        grid-template-rows: repeat(3, auto);
+
+                        >div:nth-child(1){
+                            grid-column: 1/2;
+                            grid-row: 1/2;
+                        }
+        
+                        >div:nth-child(2){
+                            grid-column: 1/2;
+                            grid-row: 2/3;
+                        }
+        
+                        >div:nth-child(3){
+                            grid-column: 1/2;
+                            grid-row: 3/4;
+                        }
+            }
+            // STYLES FOR THE FORM ELEMENTS
+            >div{
+
+                p {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: rem(15px);
+                    line-height: rem(21px);
+                    color: var(--secondary-black-color); 
+
+                    @include mobile-screen {
+                        font-size: 12.8926px;
+                        line-height: 18px;
+                    }
+                }
+
+                // ADDING INPUT and TEXTAREA STYLES
+                input {
+                    @include custom-input;
+                            
+                    @include mobile-screen {
+                        font-size: 15.4711px;
+                        line-height: 22px;
+                        width: 100%;
+                    }
+                }
+
+                &:last-child{
+                    textarea{
+                        width: 100%;
+                        height: rem(102px);
+                        @include custom-input;
+                        margin-bottom: 0 !important;
+                            resize: none;
+
+                        @include mobile-screen {
+                            font-size: 15.4711px !important;
+                            line-height: 22px !important;
+                        }
+                    }
+                }
+            }
+        }
+        // ADDING CHECKMARK
+        @include checkmark;
+         
+
+        // ADDING CUSTOM BUTTON
+        a{
+            @include catalog-btn;
+            width: rem(314.93px) !important;
+            margin-top: rem(13.5px) !important;
+            box-shadow: none !important;
+
+            @include mobile-screen {
+                font-size: 15.4711px;
+                line-height: 18px;
+                width: 259.51px !important;
+                height: 39.01px !important;
+            }
+        }
+    }
+}

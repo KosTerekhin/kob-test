@@ -1,0 +1,47 @@
+@import '../input/input';
+
+.account-nav{
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: rem(32px);
+    margin-bottom: 20px;
+
+    >a{
+        // from templates->buyButtons
+        @include buy-button-bigfont(16.0%, 38px, 14px, 17px);
+
+        @media only screen and (max-width: 769px){
+            width: 32%;
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 425px){
+            width: 48%;
+            
+        }
+
+        >p{
+            font-weight: bold;
+        }
+
+        &:hover {
+            >p {
+                letter-spacing: 0.02rem;
+            }
+        }
+    }
+
+        // active class for buttons
+        .active{
+            background-color: var(--secondary-black-color) !important;
+            border: none !important;
+    
+            >p{
+                @include clear-link(var(--main-text-color));
+            }
+        }    
+}

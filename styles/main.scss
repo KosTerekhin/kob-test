@@ -1,0 +1,22 @@
+
+@import './utilities/colors';
+@import './utilities/mixins';
+@import './utilities/fonts';
+@import './utilities/functions';
+@import './utilities/reset';
+
+@import './layout/header/header';
+@import './layout/footer/footer';
+@import './layout/body/landing/landing';
+@import './layout/body/catalog/catalog';
+@import './layout/body/history/hisotry';
+@import './layout/body/product/product';
+@import './layout/body/shoppincart/shoppingcart';
+@import './layout/body/compare/compare';
+@import './layout/body/account/account';
+@import './layout/body/login/login';
+@import './layout/body/blog/blog';
+
+
+
+

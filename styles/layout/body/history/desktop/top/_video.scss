@@ -1,0 +1,17 @@
+@import '../../components/videoBox';
+
+@mixin historypage--video {
+    width: 100%;
+    margin-bottom: rem(53px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        margin-bottom: rem(13px) !important;
+    }
+
+    >div {
+        @include video-box
+    }
+}

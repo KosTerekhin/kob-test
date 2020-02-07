@@ -1,0 +1,19 @@
+footer {
+    background-color: var(--landing-main-bg) !important;  
+    
+    @media (max-width: 600px){
+        background-color: var(--landing-text-bg) !important;  
+    }
+}
+
+@import '../../utilities/reset';
+@import '../../components/footer/checkmark';
+@import '../../components/footer/input';
+
+@import './desktop/logoUpper';
+@import './desktop/galery';
+@import './mobile/galeryMobile';
+@import './desktop/map';
+@import './desktop/bottomInfo';
+@import './desktop/bottomTerms';
+@import './desktop/scroll';

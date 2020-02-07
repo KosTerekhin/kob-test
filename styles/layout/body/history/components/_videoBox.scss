@@ -1,0 +1,54 @@
+@import '../../../../utilities/colors';
+
+@mixin video-box {
+    position: relative;
+    width: 1406.33px;
+    height: 787px;  
+    align-self: center;
+
+    @include medium-screen {
+        width: rem(1406.33px);
+        height: rem(787px); 
+    }
+
+    @include mobile-screen {
+        width: 95%;
+        height: 400px;
+    }
+
+    >#historypage-video {
+        width: 1406.33px;
+        height: 787px; 
+        
+        @include medium-screen {
+            width: rem(1406.33px);
+            height: rem(787px); 
+        }
+
+        @include mobile-screen {
+            width: 95%;
+            height: 400px;
+        }
+    }
+
+    #historypage-play-btn {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0%;
+        top: 0%;
+        z-index: 100;
+        background-color: rgba(245, 245, 245, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: ease-in-out all 0.5s ;
+
+        &:hover {
+            background-color: rgba(245, 245, 245, 0.7);
+            >img {
+                filter: var(--svg-gray-color-history);
+            }
+        }
+    }
+}

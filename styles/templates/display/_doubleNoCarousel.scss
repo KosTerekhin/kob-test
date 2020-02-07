@@ -1,0 +1,16 @@
+@mixin char-top {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    
+    .char-top-left {
+        max-width: 684px;
+        max-height: 684px;
+        width: auto;
+        height: auto;
+    }
+
+    .char-top-right {
+        
+    }
+}

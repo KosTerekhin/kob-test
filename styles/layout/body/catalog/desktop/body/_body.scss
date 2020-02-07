@@ -1,0 +1,40 @@
+@import './bodyAllItems';
+@import './bodyName';
+@import './buttonMore';
+@import './pagination';
+
+@import '../../mobile/bodyItemsMobile';
+
+@mixin body--items {
+    width: 86.5%;
+
+    .catalogpage----name {
+        @include catalogpage----name; 
+    }
+
+    .catalogpage----items{
+        @include catalogpage----items;
+    }
+
+    .catalogpage----more{
+        display: flex;
+        justify-content: center;
+        margin-top: rem(36px);
+        >a {
+            @include catalogpage----more;
+
+        }
+    }
+    .catalogpage----pagination{
+        @include catalogpage----pagination;
+    }
+
+    // MOBILE STYLES
+    @include small-screen {
+        width: 100%;
+    }
+
+    .catalogpage----items-mobile{
+        @include catalogpage----items-mobile;
+    }
+}

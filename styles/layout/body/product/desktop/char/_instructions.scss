@@ -1,0 +1,33 @@
+@mixin productpage---instructions {
+    flex-basis: 35.5%;
+    padding-left: rem(20px);
+
+    @include mobile-ultrasmall {
+        padding-left: 0;
+    }
+
+    >div{
+        display: flex;
+        align-items: center;
+        padding: rem(24px) 0 rem(24px) rem(10px);
+
+        // border
+        border-bottom: 0.930107px solid var(--product-links-border);
+        &:nth-last-of-type(1){
+            border-bottom: none !important;
+        }
+        
+        img {
+            margin-right: 18px;
+        }
+
+        a{
+            @include clear-link(var(--product-char-text));
+
+            font-style: normal;
+            font-weight: normal;
+            font-size: rem(24px);
+            line-height: rem(42px);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../../utilities/mixins';
+@import '../../../utilities/fonts';
+@import '../../../utilities/colors';
+
+footer {
+    position: relative;
+
+    @include mobile-ultrasmall {
+        margin-top: 40px;
+    }
+}
+
+.footer-upper-logo{
+        @include clear-link(#232323);
+        div{
+            @include dflex;
+            h3{
+                padding-left: 12px !important;
+                color: #232323 !important;
+            }
+        }
+}
+

@@ -1,0 +1,85 @@
+@import '../../../utilities/mixins';
+@import '../../../utilities/fonts';
+@import '../../../utilities/colors';
+
+.footer--terms{
+    flex: 1;
+
+    padding: rem(20px) 0 rem(34px) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include small-screen {
+        padding: rem(42px) 0 rem(34px) 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    @include mobile-ultrasmall {
+        padding: 15px 0 0 0;
+    }
+
+    a {
+        flex: 1;
+        @include clear-link(var(--main-text-color));
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(20px);
+        line-height: rem(20px);
+        white-space: nowrap;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:nth-child(1){
+            padding-left: 2%;
+
+            @include medium-screen {
+                padding-left: 0.5%;
+            }
+        }
+
+        &:nth-child(3){
+            flex: 2;
+            text-align: left;
+
+            @include small-screen {
+                flex: 1;
+            }
+        }
+
+        &:last-child{
+            >span {
+                text-transform: uppercase;
+            }
+
+            @include small-screen {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+
+        @include small-screen {
+            font-weight: bold !important;
+            font-size: 16px !important;
+            line-height: 20px !important;
+        }
+
+        @include mobile-ultrasmall {
+            padding-bottom: 30px;
+
+            &:last-child{
+                padding-top: 20px;
+                width: 100%;
+                border-top: 1px solid #6F6F6F;
+            }
+        }
+    }
+}

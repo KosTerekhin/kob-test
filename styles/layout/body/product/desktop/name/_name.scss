@@ -1,0 +1,63 @@
+@mixin productpage--name {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start; 
+
+            @include mobile-ultrasmall {
+                padding-left: rem(20px);
+            }
+
+            // LINKS ABOVE
+            div {
+                height: 17px;
+
+                @media only screen and (max-width: 900px) {
+                    height: auto;
+                    margin-top: 15px !important;
+                    margin-bottom: 15px !important;
+                }
+                
+                a{
+                    
+                    @include clear-link(#6F6F6F);
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 14px;
+                    vertical-align: top;
+
+                    @media only screen and (max-width: 900px){
+                        font-size: 15px;
+                        line-height: 15px; 
+                        white-space: nowrap;
+                    }
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
+                    // adding arrows
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4)
+                    {
+                        &::before {
+                            content: '->';
+                        }
+                    }
+                }
+            }
+            // page name 
+            >h3 {
+                font-style: normal !important;
+                font-weight: bold !important;
+                font-size: rem(24px) !important;
+                line-height: rem(34px) !important;
+
+                @media only screen and (max-width: 420px){          
+                    text-align: left !important;
+                    white-space: nowrap;
+                }
+            }
+}

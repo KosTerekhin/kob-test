@@ -1,0 +1,26 @@
+@import '../../../../templates/wrap/mainWrap';
+
+.shoppingcart-main-wrap {
+    @include main-wrap;
+    margin-right: rem(239px);
+
+    >h3 {
+        margin-top: rem(39px) !important;
+    }
+
+    >a {
+        @include clear-link(var(--secondary-black-color));
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        margin-top: rem(18px) !important;
+    }
+}

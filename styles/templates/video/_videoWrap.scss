@@ -1,0 +1,33 @@
+@import '../../components/videoSingle';
+
+@mixin XXX--video {
+    width: 100%;
+    margin-bottom: rem(53px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        margin-bottom: rem(13px) !important;
+    }
+
+    >div {
+        @include video-box
+    }
+}
+
+// <div class="XXX--video-wrap">
+// <h3>ВИДЕО</h3>            
+// <div>
+//     <div id="XXX-video"></div>
+//     <div id="XXX-play-btn">
+//         <img src="/styles/layout/body/history/images/playicon.svg"  class="player-icon" alt="play">
+//     </div>
+// </div>
+// <div>
+//     <div id="XXX-video"></div>
+//     <div id="XXX-play-btn">
+//         <img src="/styles/layout/body/history/images/playicon.svg"  class="player-icon" alt="play">
+//     </div>
+// </div>
+// </div>

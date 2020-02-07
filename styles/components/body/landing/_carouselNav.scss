@@ -1,0 +1,158 @@
+@mixin carousel-nav-arrows {
+    .owl-stage-outer {
+        padding-bottom: 53px !important;
+    }
+
+    .owl-dots {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(-35%) translateX(14%);
+        .owl-dot {
+            span {
+                width: 17.26px !important;
+                height: 17.26px !important;
+                border: 1px solid #C4C4C4 !important;
+                border-radius: 50%;
+                background-color: transparent !important;
+                margin: 5px 3px !important;
+            }
+        }
+
+        .active {
+            span {
+                background-color: #C4C4C4 !important;
+            }
+        }
+    }  
+    .owl-nav {
+        margin: 0 !important;
+        width: 106px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        transform: translateX(0%);
+        .owl-prev{
+            background-image: url(/styles/layout/body/landing/images/top/slider-left.svg) !important;
+        }
+
+        .owl-next{
+                background-image: url(/styles/layout/body/landing/images/top/slider-right.svg) !important;
+        }
+
+        button {
+            margin: 0 !important;
+            width: 53px !important;
+            height: 53px !important;
+            background-color:#E9E9E9 !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 18% !important;
+            border-radius: 0 !important;
+
+            &:hover {
+                background-color:rgb(128, 127, 127) !important;
+            }
+
+            &:focus {
+                outline: 2px auto #000000 !important;
+            }
+
+            span {
+                display: none;
+            }
+        }  
+    }
+}
+
+@mixin carousel-nav-arrows-desktop($cirles: 22px, $square: 79px) {
+    .owl-stage-outer {
+        padding-bottom: 53px !important;
+    }
+
+    .owl-dots {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(-35%) translateX(14%);
+        .owl-dot {
+            span {
+                width: $cirles!important;
+                height: $cirles !important;
+                border: 1px solid #C4C4C4 !important;
+                border-radius: 50%;
+                background-color: transparent !important;
+                margin: 5px 3px !important;
+            }
+        }
+
+        .active {
+            span {
+                background-color: #C4C4C4 !important;
+            }
+        }
+    }  
+    .owl-nav {
+        margin: 0 !important;
+        width: 106px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        transform: translateX(0%);
+        .owl-prev{
+            background-image: url(/styles/layout/body/landing/images/top/slider-left.svg) !important;
+        }
+
+        .owl-next{
+                background-image: url(/styles/layout/body/landing/images/top/slider-right.svg) !important;
+        }
+
+        button {
+            margin: 0 !important;
+            width: $square !important;
+            height: $square !important;
+            background-color:#E9E9E9 !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 18% !important;
+            border-radius: 0 !important;
+
+            &:hover {
+                background-color:rgb(128, 127, 127) !important;
+            }
+
+            &:focus {
+                outline: 2px auto #000000 !important;
+            }
+
+            span {
+                display: none;
+            }
+        }  
+    }
+}
+
+@mixin carousel-nav-circles {
+    .owl-dots {
+        .owl-dot {
+            span {
+                width: 17.26px !important;
+                height: 17.26px !important;
+                border: 1px solid #C4C4C4 !important;
+                background-color: transparent !important;
+                margin: 5px 3px !important;
+            }
+        }
+
+        .active {
+            span {
+                background-color: #C4C4C4 !important;
+            }
+        }
+    }  
+    .owl-nav {
+       display: none;
+    }
+}

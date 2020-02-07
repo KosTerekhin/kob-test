@@ -1,0 +1,17 @@
+@import '../../../../../templates/buttons/buyButton';
+
+.conf-submit {
+    display: flex;
+    justify-content: center;
+
+    margin-top: rem(26px);
+    margin-bottom: rem(28px);
+
+    >a {
+       @include buy-button-black(433px, 52px, 21.7417px, 30px);
+
+       >p{
+        font-weight: bold;
+       }
+    }
+}

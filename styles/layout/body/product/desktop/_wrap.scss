@@ -1,0 +1,100 @@
+@import '../../../../utilities/colors';
+@import '../../../../utilities/fonts';
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+
+@import './videos/videoWrap';
+@import './top/display';
+@import './top/wrapMedias';
+@import './links/links';
+@import './name/name';
+@import './description/description';
+@import './char/characteristics';
+@import './char/instructions';
+@import './customer/contactFrom';
+@import './customer/reviews';
+
+@import '../components/carouselFour';
+
+
+.productpage-main-wrap {
+    @include wrap-media;
+
+    .productpage--name{
+        @include productpage--name;
+    }
+
+    .productpage--display{
+        @include productpage--display;
+    }
+
+    .productpage--links {
+        @include productpage--links;
+    }
+
+    .productpage--description{
+        @include productpage--description;
+    }
+
+    .productpage--char-wrap{
+        display: flex;
+        margin-top: rem(44px);
+
+        @include mobile-ultrasmall {
+            flex-direction: column;
+        }
+
+        .productpage---characteristics{
+            @include productpage---characteristics
+        }
+
+        .productpage---instructions{
+            @include productpage---instructions
+        }
+    }
+
+    .productpage--video-wrap{
+        @include productpage--video;
+    }
+
+    .productpage--customer {
+        display: flex;
+        width: 100%;
+
+        @include small-screen {
+            flex-direction: column;
+        }
+
+        .productpage---reviews{
+            @include productpage---reviews
+        }
+
+        .productpage---contactus{
+            @include productpage---contactus
+        }
+
+        @include mobile-screen {
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    .productpage--tovari,
+    .productpage--prosmotr{
+        align-self: center;
+        margin-top: rem(55px);
+        width: 85%;
+
+        // adding carousels
+        @include body-carousel;
+    
+        @include mobile-ultrasmall {
+           width: 100%;
+
+           h3 {
+               font-size: rem(35px) !important;
+               line-height: rem(30px) !important;
+           }
+        }
+    }
+} 

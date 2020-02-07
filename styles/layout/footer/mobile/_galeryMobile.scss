@@ -1,0 +1,19 @@
+@import '../../../utilities/mixins';
+@import '../../../utilities/fonts';
+@import '../../../utilities/colors';
+
+@import '../../../components/body/landing/carouselNav';
+
+.footer-galery-mobile {
+    img {
+        max-height: 500px;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include carousel-nav-arrows;
+    .owl-nav {
+        bottom: -4px !important;
+    }
+    margin-top: rem(32px);
+}

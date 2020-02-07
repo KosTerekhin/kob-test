@@ -1,0 +1,96 @@
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+@import '../../../../components/body/landing/carouselNav';
+
+
+.historypage-novosti-wrap-mobile {
+    margin: 36px 2% 0 2%;
+
+    h3{
+        font-style: normal !important;
+        font-weight: bold !important;
+        font-size: 36px !important;
+        line-height: 143.2% !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+        margin-bottom: 16px !important;
+    }
+
+    @include carousel-nav-circles;
+
+    .owl-carousel{
+        // BACKGROUND
+
+        @for $i from 1 through 4 {
+            .item:nth-child(#{$i}){
+                div {
+                    width: 100%;
+                    height: 165.93px;
+                    @include bg(#FFFFFF url(/styles/layout/body/landing/images/blog/#{$i}.png));
+
+                }              
+            }
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            >p {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 23.8464px;
+                line-height: 26px;
+            }
+            // BUTTON TO READ
+            a{
+              @include product-btn;  
+              margin-top: 25px;
+              padding-bottom: 25px;
+              font-size: 19.0582px !important;
+              line-height: 23px !important; 
+            }
+            // CALENDAR and COMMENTS
+            div {
+                position: relative;
+                z-index: 0;
+                margin-bottom: 10px !important;
+                span {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 10;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--main-text-color) !important; 
+                    padding: 15px 12px 13px 11px;
+                    
+                    p {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 13.9104px;
+                        line-height: 17px;                       
+                        text-transform: lowercase;
+                        color: #6F6F6F;
+                        margin: 0 8px !important;
+                        margin-right: 0 !important;
+
+                        &:nth-child(2){
+                            padding-right: 12px !important;
+                            border-right: 1px solid #6F6F6F !important;
+                        }
+
+                    }
+
+                    img {
+                        &:nth-child(3){
+                            margin-left: 12px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

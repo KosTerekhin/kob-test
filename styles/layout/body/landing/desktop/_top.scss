@@ -1,0 +1,197 @@
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+
+.landing-top-wrap {
+    display: grid;
+    grid-template-columns: 37.3% 29.5% 33.2%;
+    grid-template-rows: repeat(2, rem(412.5px)) ;
+
+    >div{
+
+        p{
+            color: var(--landing-text-color);
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(18px);
+            line-height: rem(22px); 
+            width: rem(361px);
+            text-align: center;
+
+            @include small-screen {
+                width: rem(280px);
+            }
+
+            @include mobile-ultrasmall{
+                font-size: 16px;
+                line-height: 22px;
+                width: 94% !important;
+            }
+        }
+
+        h3 {
+            margin-bottom: rem(11px) !important;
+            text-align: left !important;
+            
+        }
+        // LOGO BLOCK STYLES
+        &:nth-child(1){ 
+            grid-row: 1/3;
+            grid-column: 1/2;
+            @include dflex($ai: flex-start, $fd: column);
+            padding-left: rem(164px);
+            background: url("../images/1.png");
+            @include bg(url(/styles/layout/body/landing/images/top/bg1.png));
+
+            a:first-child{
+                @include clear-link(var(--main-black-color));
+                font-style: normal;
+                font-weight: bold; 
+                font-size: rem(120px);
+                line-height: rem(100px);            
+                text-transform: capitalize; 
+                margin-bottom: rem(34px); 
+
+                @include mobile-ultrasmall {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 62px;
+                    line-height: 59px;
+                    text-transform: uppercase;
+                    margin-top: 63px;
+                    width: 96%;
+                    text-align: center !important;
+                }
+            }
+
+            .landing--catalog-btn{
+                @include catalog-btn;
+                margin-top: rem(33px);
+                margin-bottom: rem(86px);
+
+                @include mobile-ultrasmall {
+                    font-size: 18px;
+                    line-height: 21px;
+                    width: 291px;
+                    height: 45.39px;
+                    align-self: center;
+                    margin-left: 3%;
+                    margin-right: 3%;
+                    width: 94%;
+                }
+            }
+            // LOGO BLOCK MEDIAS
+            @include large-screen {
+                padding-left: 0;
+                align-items: center;
+
+                >a:first-child {
+                    text-align: center;
+                }
+            }
+        };
+
+        // GRID BUILDING 
+        &:nth-child(2){
+            grid-row: 1/3;
+            grid-column: 2/3;
+            background-color: var(--main-text-color);
+        };
+    
+        &:nth-child(3){
+            grid-row: 1/2;
+            grid-column: 3/4;
+            @include bg(url(/styles/layout/body/landing/images/top/top-right1.svg));
+
+        };
+    
+        &:nth-child(4) {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            @include bg(url(/styles/layout/body/landing/images/top/top-right2.svg));
+        };
+        // RIGHT SMALL BLOCKS
+        &:nth-child(3),
+        &:nth-child(4){
+            @include dflex($ai: flex-start, $fd: column);
+            padding-left: rem(96px);
+
+            .landing--product-btn {
+                @include product-btn;
+                margin-top: rem(23px) !important;
+                margin-bottom: rem(45px) !important;
+            }
+
+            // RIGHT SMALL BLOCKS MEDIA
+            @include medium-screen {
+                padding-left: rem(50px);
+            }
+
+            // MOBILE VERSION
+        }
+    }
+
+    @include large-screen {
+        grid-template-columns: repeat(3, 33.2%);
+    }
+
+    @include medium-screen {
+        h3 {
+            margin-top: 20px;
+        }
+    }
+    
+    // MOBILE VERSION
+
+    @include small-screen {
+        grid-template-columns: repeat(2, 50%);     
+        grid-template-rows: auto rem(412.5px);     
+        
+        >div {
+            &:first-child {
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+            &:nth-child(2) {
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+            &:nth-child(3) {
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+            &:nth-child(4) {
+                grid-row: 2/3;
+                grid-column: 2/3;
+            }
+            
+            &:nth-child(3),
+            &:nth-child(4){
+                padding-left: 0;
+                align-items: center;
+            }
+        }
+    }
+
+    @include mobile-ultrasmall {
+        grid-template-columns: 1fr;     
+        grid-template-rows: repeat(2, 496px); 
+        position: relative;
+        >div {
+
+            &:first-child {
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4){
+                display: none !important;
+            }
+        }
+    }
+}

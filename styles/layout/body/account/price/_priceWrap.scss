@@ -1,0 +1,8 @@
+@import '../../../../templates/wrap/mainWrap';
+
+
+.accountprice-main-wrap{
+    @include main-wrap;
+    margin-bottom: rem(233px) !important;
+    margin-top: rem(90px);
+}

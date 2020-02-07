@@ -1,0 +1,272 @@
+@import '../components/quantityBox';
+
+@mixin cart-item {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    // border set up
+    border-bottom: 1.17201px solid var(--cart-img-border);
+    &:nth-last-of-type(1){
+        border-bottom: none;
+    }
+    
+    margin-left: rem(30px);
+    padding-left: rem(13px);
+    margin-top: rem(18px);
+    padding-bottom: rem(18px);
+
+    // quantity
+    @include quantity;
+
+    // DESKTOP
+    >div {
+ 
+        // image + item details
+        &:nth-child(1){
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            @include mobile-ultrasmall {
+                flex-direction: column;
+            }
+
+            >img {
+                border: 1.17201px solid var(--cart-img-border);
+            }
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding-left: rem(11px);
+
+                p {
+                    &:nth-child(1){
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(20px);
+                        line-height: rem(24px);
+                        padding-bottom: 5px;               
+                    }
+                    &:nth-child(2){
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: rem(18px);
+                        line-height: rem(32px);
+                    }
+                    &:nth-child(3){
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: rem(18px);
+                        line-height: rem(32px);
+                    }
+                }
+            }
+        }
+        // price + discount
+        &:nth-child(5),
+        &:nth-child(3),
+        &:nth-child(4){
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(20px);
+            line-height: rem(29px);   
+        }
+        
+    }
+    // delete button
+    .deleteBtn{
+        >img {            
+            filter: var(--svg-6F6F6F-gray);
+            cursor: pointer;
+            &:hover{
+                filter: var(--svg-282828-black);
+            }
+        }
+    }
+    // feedbackbtn
+    .feedbackBtn{
+        >img {            
+            filter: var(--svg-6F6F6F-gray);
+            cursor: pointer;
+            &:hover{
+                filter: var(--svg-282828-black);
+            }
+            @include mobile-ultrasmall{
+                margin-top: -8px !important;
+                margin-right: -13px !important;
+            }
+        }
+    }
+    // MOBILE 
+    @include mobile-ultrasmall {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+        
+    padding-left: 1%;
+    margin-left: 0;
+
+    >div {
+        // image + item details
+        &:nth-child(1){
+            flex-basis: 32%;
+            flex-direction: column;
+            align-items: flex-start;
+            border-right: 1.17201px solid var(--cart-img-border);
+            padding-right: 2%;
+
+            >img{
+                width: 100%;
+                height: auto;
+                border: none;
+            }
+        }
+        // delete button
+        &:nth-last-child(1){
+            flex-basis: 10%;
+            text-align: center;
+
+            >img {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    >.mobile-flex {
+        flex-basis: 58%;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 2%;
+
+        >div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // quantity
+            &:first-child{
+                p{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 29px;  
+                    @media only screen and (max-width: 375px) {
+                        font-size: rem(20px);
+                        line-height: rem(29px);  
+                    }                     
+                }
+
+                // mobile quantity
+                >.quantity{
+                    input {
+                        width: rem(50.62px);
+                        height: rem(51.68px);
+                    }
+
+                    .quantity-nav {
+                        position: absolute;
+                        height: 100%;
+                        width: rem(23.2px);
+
+                        top: 0;
+                        left: 0;
+                        transform: translateX(-119%);
+                    }   
+                    .quantity-button{
+                        width: 100%;
+                        height: rem(23.2px);
+                    }    
+                }                
+            }
+            // price and discount
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+                p {
+                    &:first-child {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 32px;
+                        color: var(--main-black-color);    
+                        
+                        @media only screen and (max-width: 375px) {
+                            font-size: rem(18px);
+                            line-height: rem(32px);  
+                        } 
+                    }
+
+                    &:last-child{
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 29px;   
+
+                        @media only screen and (max-width: 375px) {
+                            font-size: rem(20px);
+                            line-height: rem(29px);  
+                        } 
+                    }
+                }
+            }
+        }
+    }
+  }
+
+}
+
+// include mixin into XXX-item
+
+// <div class="XXX-item">
+// <div>
+//     <img src="/styles/layout/body/shoppincart/images/item.svg" alt="item-pic">
+//     <div>
+//         <p>Микрофонная стойка "журавль" Gravity TMS4321B</p>
+//         <p>Код: GTMS4321B</p>
+//         <p id="product-name">Ожидается</p>
+//     </div>
+// </div>
+// <!-- DESKTOP BLOCKS -->
+// <div class="quantity desktop">
+//     <input type="number" min="1" step="1" value="1">
+// </div>
+// <div class="desktop">
+//     <p>15 040 грн</p>
+// </div>
+// <div class="desktop">
+//     <p>0%</p>
+// </div>
+// <div class="desktop">
+//     <p>15 040 грн</p>
+// </div>
+// <!-- MOBILE BLOCKS -->
+// <div class="mobile-flex">
+//     <!-- quantity -->
+//     <div>
+//         <p>Количество</p>
+//         <div class="quantity">
+//             <input type="number" min="1" step="1" value="1">
+//         </div>
+//     </div>
+//     <!-- price -->
+//     <div>
+//         <p>Цена за шт.</p>
+//         <p>15 040 грн</p>
+//     </div>
+//     <div>
+//         <p>Скидка</p>
+//         <p>0%</p>
+//     </div>
+//     <div>
+//         <p>Всего</p>
+//         <p>15 040 грн</p>
+//     </div>
+// </div>
+// <div class="deleteBtn">
+//     <img src="/styles/layout/body/shoppincart/images/deletebtn.svg" alt="delete">
+// </div>
+// </div>

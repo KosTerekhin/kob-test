@@ -1,0 +1,117 @@
+@import '../../components/priceSelect';
+
+@mixin catalogpage----name {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 425px){
+        flex-direction: column;
+    }
+
+    >div {
+
+        // LEFT SIDE
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start; 
+
+            @media only screen and (max-width: 321px){
+                order: 2;
+            }
+
+            // LINKS ABOVE
+            div {
+                height: rem(17px);
+                margin-top: 15px !important;
+                margin-bottom: 15px !important;
+
+                @include mobile-screen{
+                    height: auto;                       
+                }
+
+                a{
+                    
+                    @include clear-link(#6F6F6F);
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 14px;
+                    vertical-align: top;
+
+                    @include mobile-screen{
+                        font-size: 15px;
+                        line-height: 15px;                        
+                    }
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
+                    // adding arrows
+                    &:nth-of-type(2),
+                    &:nth-of-type(3) {
+                        &::before {
+                            content: '->';
+                        }
+                    }
+                }
+            }
+            // page name 
+            >h3 {
+                font-style: normal !important;
+                font-weight: bold !important;
+                font-size: rem(24px) !important;
+                line-height: rem(34px) !important;
+
+                @media only screen and (max-width: 425px){          
+                    text-align: left !important;
+                    white-space: nowrap;
+                    font-size: 24px!important;
+                    line-height: 34px !important;
+                }
+            }
+        }
+
+        // SORTIROVAT, DROP DOWN
+        &:last-child {
+            vertical-align: bottom;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            @media only screen and (max-width: 425px){
+                flex-direction: row;
+                justify-content: flex-start;
+                order: 1;
+                margin-bottom: 15px;
+                margin-top: 8px;
+            }
+
+            >p{
+                font-style: normal;
+                font-weight: 500;
+                font-size: rem(14px);
+                line-height: rem(17px);              
+                color: #6F6F6F;   
+                padding-bottom: 6px; 
+
+                @media only screen and (max-width: 900px){
+                    padding-bottom: 0;
+                }
+                @media only screen and (max-width: 900px){
+                    font-size: 15px;
+                    line-height: 15px; 
+                    white-space: nowrap;
+                }
+                
+                @media only screen and (max-width: 420px){          
+                    padding-right: rem(11px) !important;
+                }
+            }
+
+            @include price-select;
+        }    
+    }
+}

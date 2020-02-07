@@ -1,0 +1,39 @@
+@mixin compare--description {
+    margin-top: rem(14px);
+    width: 100%;
+    h5 {
+        text-transform: initial;
+        
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px ;
+        color: var(--secondary-black-color);
+
+        margin-bottom: 4px !important;
+
+        // name
+        &:nth-of-type(2){
+            margin-top: rem(25px) !important;
+        }
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    >p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(24px);
+        line-height: rem(26px);          
+        color: var(--product-gray-color);
+
+        margin-top: 21.5px !important;
+        padding-left: 9px;
+
+        &:last-child {
+            margin-top: 22px !important;
+        }
+    }
+}

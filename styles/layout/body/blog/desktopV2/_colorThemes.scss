@@ -1,0 +1,42 @@
+.light-theme{
+    h4, h5{
+        color: var(--secondary-black-color) !important;        
+    }
+
+    p, li, a{
+        color: var(--main-black-color) !important;        
+    }
+    
+}
+
+.dark-theme{
+    
+    h4, h5{
+        color: var(--main-text-color) !important;        
+    }
+
+    p, li, a{
+        color: var(--main-text-color) !important;        
+    }
+
+    >span{
+        img{
+            filter: var(--svg-white-color)
+        }
+    }
+}
+
+.blogpage-light{
+    margin-bottom: 32px !important;
+    margin-top: 0 !important;
+}
+
+.blogpage-dark{
+    background-color: var(--secondary-black-color) !important;  
+    margin: 0 !important;
+    padding-bottom: 32px !important;
+}
+
+.blogimg-dark{
+    background-color: var(--secondary-black-color) !important;  
+}

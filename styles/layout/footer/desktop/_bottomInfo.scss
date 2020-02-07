@@ -1,0 +1,161 @@
+@import '../../../utilities/mixins';
+@import '../../../utilities/fonts';
+@import '../../../utilities/colors';
+
+.footer-bottom {
+    background-color: var(--footer-bg-color);
+
+    @include small-screen {
+        display: flex;
+    }
+    @include mobile-ultrasmall {
+        flex-direction: column;
+    }
+
+    .footer--info {
+        flex: 1;
+
+        padding: rem(42px) 0 rem(34px) 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #6F6F6F;
+
+        @include small-screen {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+        }
+
+        >a {
+            display: flex;
+            justify-content: center;
+            img{
+                display: block;
+                line-height: 0;
+                
+                @include small-screen {
+                   max-width: 267px;
+                   max-height: 74px;
+                   width: auto;
+                   height: auto;
+                }
+            }
+        }
+
+        >div{
+            &:last-child{
+                @include dflex($jc: center);
+
+                a {
+                    width: rem(67px);
+                    height: rem(67px);
+
+                    @include dflex;
+                    &:nth-child(2){
+                        margin-left: 15px;
+
+                        @include small-screen {
+                            margin-left: 45px;
+                        }
+                    }
+                    &:nth-child(3){
+                        margin-left: 15px;
+
+                        @include small-screen {
+                            margin-left: 45px;
+                        }
+                    }                  
+                }
+            }
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+                display: flex;
+                justify-content: center;
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    p, a{
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: rem(20px);
+                        line-height: rem(25px);  
+                        color: var(--main-text-color);
+                        margin-left: 13px !important;
+                        white-space: nowrap;
+
+                        @include small-screen {
+                            font-size: 18.5135px !important;
+                            line-height: 23px !important;
+                        }
+                    }
+
+                    a{
+                        @include clear-link(var(--main-text-color));
+
+                        &:hover{
+                            color: var(--text-hover-color) !important;
+                        }                       
+                    }
+                }
+            }
+        }
+
+        @include mobile-ultrasmall {
+            grid-template-areas: 
+            ". logo ."
+            ". social . "
+            ". time ."
+            ". email ."
+            ". phone .";
+
+            grid-template-columns: 0.5fr 1fr 0.5fr;
+            grid-template-rows: 1fr 1.40fr repeat(3, 1fr);
+            justify-content: flex-start;
+
+            >a {
+                grid-area: logo;
+                justify-content: flex-start;
+            }
+            >div {
+                justify-content: flex-start !important;
+
+                &:nth-child(2){
+                    grid-area: time;
+                    >div {
+                        p {
+                            margin-left: 18px !important;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    grid-area: email;
+                }
+                &:nth-child(4){
+                    grid-area: phone;
+                    >img {
+                        margin-left: 10px;
+                    }
+                    >div {
+                        a {
+                            margin-left: 25px !important;
+                        }
+                    }
+                }
+                &:nth-child(5){
+                    grid-area: social;
+                    padding-left: 10px;
+                    // margin-top: 31px;
+                }
+            }
+        }
+    }
+
+    @import url('./_bottomTerms.scss');
+}

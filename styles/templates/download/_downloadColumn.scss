@@ -1,0 +1,272 @@
+// should be on top
+
+// .XXX-main-wrap    {
+//     margin: rem(19px) rem(226px) 0 rem(261px);
+//     display: flex;
+//     flex-direction: column;
+//     height: auto;
+
+//     @media only screen and (max-width: 1700px){
+//         margin: rem(19px) rem(55px) 0 rem(55px);
+//     }
+
+//     @media only screen and (max-width: 1500px){
+//         margin: rem(19px) rem(20px) 0 rem(20px);
+//     }
+// } 
+@mixin XXX--download {
+
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(39px);
+
+    >h3{
+        font-size: rem(42px) !important;
+        line-height: rem(60px) !important;
+        margin-bottom: rem(36px) !important;
+    }
+
+    >.line-border {
+        padding: rem(26px) rem(23px) rem(23px) rem(12px) !important;
+        border-bottom: 1px solid var(--history-border);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            @include mobile-screen {
+                flex-direction: column;
+                // align-items: flex-start;
+            }
+    
+            >div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                // left side
+                &:first-child {
+                    img {
+                        filter: var(--svg-gray-color-history);
+                        cursor: pointer;
+    
+                        &:first-child {
+                            margin-right: rem(16px);
+                        };            
+                    }
+            
+                    >p {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: rem(22px);
+                        line-height: rem(42px); 
+                        color: var(--secondary-black-color);
+                        align-self: flex-start;
+                        white-space: nowrap;
+    
+                        @include small-screen {
+                            white-space: normal;
+                            align-self: center;
+                        }
+                    }
+                }
+    
+                // right side divs
+                &:last-child{
+                    div {
+                        display: flex;
+                        justify-content: center;
+            
+                        &:nth-of-type(1) {
+                            margin-right: rem(37px);
+                            cursor: pointer;
+                            >p {
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: rem(16.676px);
+                                line-height: rem(20px);
+                                color: var(--history-main-gray);
+                            }
+            
+                            >img {
+                                margin-right: rem(3px);
+                            }
+    
+                            @include mobile-screen {
+                                margin-top: 10px;
+                            }
+                        }
+            
+                        &:nth-of-type(2),
+                        &:nth-of-type(3){
+                            width: 181px;
+                            height: 45px;
+                            align-items: center;
+                            border: 1px solid var(--secondary-black-color);
+                            cursor: pointer;
+                            >img {
+                                filter: --svg-282828-black;
+                                margin-right: rem(6px);
+                            }
+            
+                            >p{
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: rem(18px);
+                                line-height:rem(21px);
+                                text-transform: uppercase;
+                                color: var(--history-secondary-black);                   
+                            }
+    
+                            &:hover{ 
+                                background-color: var(--main-black-color);
+                                border: 1px solid var(--main-text-color);  
+                                
+                                p{
+                                    color: var(--main-text-color);
+                                }
+    
+                                img {
+                                    filter: var(--svg-white-color);
+                                }
+                            }
+                            @include mobile-screen {
+                                margin-top: 10px;
+                            }
+                        }
+            
+                        &:nth-of-type(2){
+                            margin-right: rem(14px);
+    
+                            @include mobile-screen {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+    
+                    @include mobile-screen {
+                        width: 100%;
+                        flex-direction: column;
+    
+                        div {                        
+                            &:nth-of-type(2),
+                            &:nth-of-type(3){
+                                width: 60%;
+    
+                                >img {
+                                    margin-right: 0;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+    
+            }
+        }
+    }
+}
+
+// <div class="XXX--download">
+// <h3>Файлы для скачивания</h3>
+// <div class="line-border">
+//     <div>                    
+//         <div>
+//             <img src="/styles/layout/body/history/images/pdf.svg" alt="pdf">
+//             <p>Прайс-лист «LD-Systems, сентябрь 2019 - Акустические системы»</p>
+//         </div>
+
+//         <div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/calendar.svg" alt="calendar">
+//                 <p>18.10.2019</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/view.svg" alt="view">
+//                 <p>просмотр</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/download.svg" alt="download">
+//                 <p>скачать</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="line-border">
+//     <div>                    
+//         <div>
+//             <img src="/styles/layout/body/history/images/pdf.svg" alt="pdf">
+//             <p>Прайс-лист «LD-Systems, сентябрь 2019 - Акустические системы»</p>
+//         </div>
+
+//         <div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/calendar.svg" alt="calendar">
+//                 <p>18.10.2019</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/view.svg" alt="view">
+//                 <p>просмотр</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/download.svg" alt="download">
+//                 <p>скачать</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="line-border">
+//     <div>                    
+//         <div>
+//             <img src="/styles/layout/body/history/images/pdf.svg" alt="pdf">
+//             <p>Прайс-лист «LD-Systems, сентябрь 2019 - Акустические системы»</p>
+//         </div>
+
+//         <div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/calendar.svg" alt="calendar">
+//                 <p>18.10.2019</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/view.svg" alt="view">
+//                 <p>просмотр</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/download.svg" alt="download">
+//                 <p>скачать</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// <div class="line-border">
+//     <div>                    
+//         <div>
+//             <img src="/styles/layout/body/history/images/pdf.svg" alt="pdf">
+//             <p>Прайс-лист «LD-Systems, сентябрь 2019 - Акустические системы»</p>
+//         </div>
+
+//         <div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/calendar.svg" alt="calendar">
+//                 <p>18.10.2019</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/view.svg" alt="view">
+//                 <p>просмотр</p>
+//             </div>
+//             <div>
+//                 <img src="/styles/layout/body/history/images/download.svg" alt="download">
+//                 <p>скачать</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+// </div>

@@ -1,0 +1,85 @@
+@mixin quantity-box {
+    .quantity {
+        position: relative;
+      }
+      
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button
+      {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      
+      input[type=number]
+      {
+        -moz-appearance: textfield;
+      }
+      
+      .quantity input {
+        width: 50.62px;
+        height: 51.68px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21.0931px;
+        line-height: 25px;
+        letter-spacing: -0.04em;
+        text-align: center;
+
+        border: 1.05466px solid var(--secondary-black-color);
+        color: var(--secondary-black-color);
+      }
+      
+      .quantity input:focus {
+        outline: 0;
+      }
+      
+      .quantity-nav {
+        position: absolute;
+        height: 100%;
+        width: 23.2px;
+        top: 0;
+        right: 0;
+        transform: translateX(119%);
+      }
+      
+      .quantity-button {
+        cursor: pointer;
+        border-left: 1px solid #eee;
+        width: 23.2px;
+        text-align: center;
+        user-select: none;
+
+        font-weight: 500;
+        font-size: 21.0931px;
+        line-height: 25px;
+        letter-spacing: -0.04em;
+
+      }
+      
+      .quantity-button.quantity-up {
+        position: absolute;
+        top: 0;
+        height: 23.2px;
+        border-bottom: 1px solid #eee;
+        background-image: url(/styles/layout/body/product/images/arrowup.svg);
+        background-color:  var(--product-quantity-btn);
+        background-position: center;
+        background-repeat: no-repeat;
+
+      }
+      
+      .quantity-button.quantity-down {
+        position: absolute;
+        bottom: 0px;
+        height: 23.2px;
+        background-image: url(/styles/layout/body/product/images/arrowdown.svg);
+        background-color:  var(--product-quantity-btn);
+        background-position: center;
+        background-repeat: no-repeat;
+      } 
+}
+
+// <div class="quantity">
+// <input type="number" min="1" step="1" value="1">
+// </div>

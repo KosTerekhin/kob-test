@@ -1,0 +1,222 @@
+@mixin checkmark {
+    // CUSTOM CHECK BOX
+    .footer--checkmark {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        margin-top: rem(17px) !important;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(16px);
+        line-height: rem(23px);
+        color: var(--main-text-color);
+    }
+    
+    /* Hide the browser's default checkbox */
+    .footer--checkmark input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 22px;
+        width: 22px;
+        background-color: var(--main-text-color);
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .footer--checkmark:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+             
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .footer--checkmark input:checked ~ .checkmark::after {
+        display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .footer--checkmark .checkmark::after {
+        left: 8px;
+        top: 2px;
+        width: 6px;
+        height: 15px;
+        border: solid var(--main-black-color);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }     
+}
+
+
+@mixin cart-checkmark {
+    // CUSTOM CHECK BOX
+    .shoppingcart---checkmark {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        white-space: nowrap;
+        color: var(--secondary-black-color);
+
+        margin-bottom: 0 !important;
+        margin-top: 13px;
+        margin-left: 3px;
+        padding-left: 18px;
+
+
+    }
+
+    .disabled-checkmark {
+        opacity: 0.2;
+        cursor: no-drop;
+    }
+    
+    /* Hide the browser's default checkbox */
+    .shoppingcart---checkmark input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 16%;
+        left: 0;
+        background-color: var(--main-text-color);
+        border: 1px solid var(--secondary-black-color);
+
+        height: 13px;
+        width: 13px;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .shoppingcart---checkmark:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+             
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .shoppingcart---checkmark input:checked ~ .checkmark::after {
+        display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .shoppingcart---checkmark .checkmark::after {
+        left: 3px;
+        top: 0px;
+        width: 5px;
+        height: 10px;
+        border: solid var(--secondary-black-color);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }     
+}
+
+@mixin login-checkmark {
+    // CUSTOM CHECK BOX
+    .login---checkmark {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        white-space: nowrap;
+        color: var(--secondary-black-color);
+
+        margin-bottom: 0 !important;
+        margin-top: 13px;
+        margin-left: 3px;
+        padding-left: 18px;
+
+
+    }
+
+    .disabled-checkmark {
+        opacity: 0.2;
+        cursor: no-drop;
+    }
+    
+    /* Hide the browser's default checkbox */
+    .login---checkmark input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 16%;
+        left: 0;
+        background-color: var(--main-text-color);
+        border: 1px solid var(--secondary-black-color);
+
+        height: 13px;
+        width: 13px;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .login---checkmark:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+             
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .login---checkmark input:checked ~ .checkmark::after {
+        display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .login---checkmark .checkmark::after {
+        left: 3px;
+        top: 0px;
+        width: 5px;
+        height: 10px;
+        border: solid var(--secondary-black-color);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }     
+}

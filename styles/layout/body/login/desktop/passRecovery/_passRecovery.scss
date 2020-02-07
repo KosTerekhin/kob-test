@@ -1,0 +1,28 @@
+.pass-recoveryV1{
+    margin-top: rem(117px);
+
+    >p{
+        margin-top: 22px !important;
+        margin-bottom: 55px !important;
+    }
+
+    >h3{
+        @media only screen and (max-width: 374px){
+            font-size: 2.5rem !important;
+        }
+    }
+}
+
+
+.pass-recoveryV2{
+    margin-top: rem(117px);
+
+    >h3{
+        margin-bottom: rem(97px) !important;
+
+        @media only screen and (max-width: 374px){
+            font-size: 2.5rem !important;
+
+        }
+    }
+}

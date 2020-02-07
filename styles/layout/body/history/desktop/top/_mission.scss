@@ -1,0 +1,57 @@
+.historypage-mission-wrap {
+    >p {
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(24px);
+        line-height: rem(28px);      
+        text-align: center;    
+        color: var(--secondary-black-color);
+
+        margin-bottom: 50px !important;    
+    }
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    
+        h3 {
+            margin-bottom: 75px !important;
+            color: var(--secondary-black-color) !important;
+        }
+
+        >p{
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: normal;
+            font-size: rem(20px);
+            line-height: rem(32px);
+            color: var(--main-black-color);
+
+            width: 47%;
+
+            margin-bottom: 30px !important;
+
+            >.strong {
+               font-weight: 800; 
+            }
+
+            @include mobile-screen {
+                width: 60%;
+            }
+        }
+
+        >div {
+            position: absolute;
+            top: 6.5%;
+            left: 25.2%;
+
+            @include mobile-screen {
+                top: 5.5%;
+                left: 18.2%;
+            }
+        }
+    }
+}

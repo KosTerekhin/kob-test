@@ -1,0 +1,50 @@
+* {
+	// HEADER AND GENERAL
+	--main-black-color: #000000;
+	--secondary-black-color: #232323;
+	--main-text-color: #ffffff;
+	--main-border-color: #ababab;
+	--text-hover-color: rgb(154, 155, 204);
+	--cart-box-color: #2e7d32;
+	--search-bg: #404040;
+
+	// LANDING
+	--landing-text-color: #6F6F6F;
+	--landing-main-bg: #FFFFFF;
+	--catalog-element-bg: #F5F5F5;
+	--novinki-main-bg: #DADADA;
+
+	// FOOTER
+
+	--footer-bg-color: #181818;
+
+	// HISTORY
+
+	--history-main-gray: #6F6F6F;
+	--history-secondary-black: #282828;	
+	--history-border: #DADADA;
+
+	// PRODUCT
+
+	--product-gray-color: #6F6F6F;
+	--product-border: #DADADA;
+	--product-quantity-btn: #F5F5F5;
+	--product-carousel-border: #E7E7E7;
+	--product-links-border: #DBDBDB;
+	--product-char-text: #4F4F4F;
+	--product-review-calendar: #ACACAC;
+
+	// SHOPPINGCART
+
+	--cart-border: #DADADA;
+	--cart-img-border: #E7E7E7;
+
+	// SVG
+	--svg-white-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(103%) contrast(105%);
+	--svg-black-color: invert(13%) sepia(0%) saturate(1402%) hue-rotate(141deg) brightness(109%) contrast(101%);
+	--svg-282828-black: invert(13%) sepia(50%) saturate(0%) hue-rotate(194deg) brightness(79%) contrast(88%);
+	--svg-4F4F4F-black: invert(31%) sepia(2%) saturate(0%) hue-rotate(209deg) brightness(99%) contrast(99%);
+	--svg-gray-color-history: invert(45%) sepia(1%) saturate(0%) hue-rotate(111deg) brightness(95%) contrast(89%);
+	--svg-6F6F6F-gray: invert(46%) sepia(0%) saturate(2%) hue-rotate(304deg) brightness(93%) contrast(90%);
+
+}

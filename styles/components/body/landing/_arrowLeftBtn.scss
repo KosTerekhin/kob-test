@@ -1,0 +1,15 @@
+@mixin arrowleft-btn($size) {
+    position: relative;
+        a {
+            position: absolute;
+            @include dflex;
+            width: rem($size);
+            height: rem($size);
+            min-width: rem($size);
+            min-height: rem($size);
+            background-color: var(--main-text-color);
+            right: 0;
+            bottom: 0;
+            transition: all 0.3s ease-in-out;
+        }
+}

@@ -1,0 +1,20 @@
+@mixin menu-paragraph {
+            font-style: normal;
+            font-weight: normal;
+            font-size: rem(20px);
+            line-height: rem(24px);
+            text-transform: uppercase;
+            color: #4F4F4F;
+
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            padding: rem(11px) 0 rem(15px) rem(13px);
+            background-color: #F5F5F5;
+            border: none;
+
+            @include mobile-screen {
+                font-size: 20px !important;
+                line-height: 24px !important;
+            }
+}

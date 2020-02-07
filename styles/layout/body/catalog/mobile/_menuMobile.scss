@@ -1,0 +1,31 @@
+@import '../desktop/menu/menu';
+
+@mixin catalogpage----menu-mobile {
+    justify-content: center;
+    >.btn {
+        @include catalogpage----more
+    }
+
+    >.modal {
+        top: 10px !important;
+        
+        .modal-body {
+            @include catalog--menu;
+        }
+
+        .modal-footer{
+           justify-content: space-between;
+           
+           >button{
+                width: 46%;
+                height: auto;
+                font-size: 16px !important;
+                line-height: 16px !important;
+                font-style: normal;
+                padding: 10px 0;
+
+           }
+        }
+
+    }
+}

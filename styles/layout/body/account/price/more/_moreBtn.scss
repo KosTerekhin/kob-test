@@ -1,0 +1,10 @@
+@import '../../../../../templates/buttons/catalogBtn';
+
+.accountprice--more{
+    display: flex;
+    justify-content: center;
+
+    >a{
+        @include catalog-btn;
+    }
+}

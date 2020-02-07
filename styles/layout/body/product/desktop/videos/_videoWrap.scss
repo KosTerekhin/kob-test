@@ -1,0 +1,25 @@
+@import './videoSingle';
+
+@mixin productpage--video {
+    width: 100%;
+    margin-bottom: rem(53px);
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+        margin-bottom: rem(13px) !important;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px;
+        text-transform: capitalize;
+        align-self: flex-start;
+        text-align: start;
+        color: var(--secondary-black-color);
+    }
+
+    >div {
+        @include video-box;
+        margin-bottom: 20px;
+    }
+}

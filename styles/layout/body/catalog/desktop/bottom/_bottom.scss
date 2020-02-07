@@ -1,0 +1,13 @@
+@import '../../components/bodyItem';
+@import '../../components/bodyCarousel';
+
+
+@mixin bottom {
+    width: 86.5%;
+    
+    @include body-carousel;
+    
+    @include mobile-ultrasmall {
+       width: 100%;
+    }
+}

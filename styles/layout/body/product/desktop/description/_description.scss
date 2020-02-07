@@ -1,0 +1,28 @@
+@mixin productpage--description {
+    margin-top: rem(35px);
+
+    >h5 {
+        text-transform: initial;
+        margin-bottom: 4px !important;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    >p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(24px);
+        line-height: rem(26px);      
+        letter-spacing: -0.04em;        
+        color: var(--product-gray-color);
+
+        margin-top: 18px !important;
+        padding-left: 9px;
+
+        &:last-child {
+            margin-top: 22px !important;
+        }
+    }
+}

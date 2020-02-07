@@ -1,0 +1,77 @@
+.blogpage--text{
+    margin-top: 32.86px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h5{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal !important;
+        font-weight: bold !important;
+        font-size: rem(26px) !important;
+        line-height: rem(32px) !important;    
+        margin-bottom: 29px !important;            
+    }
+
+    >h4{
+        font-style: normal !important;
+        font-weight: bold !important;
+        font-size: rem(36px) !important;
+        line-height: rem(40px) !important;      
+        text-transform: none !important;  
+    }
+
+    >p{
+        font-style: normal !important;
+        font-weight: 500 !important;
+        font-size: rem(18px) !important;
+        line-height: rem(28px) !important;  
+        margin-bottom: rem(25px) !important;
+    }
+
+    >span{
+
+        width: 77%;
+        margin: auto;
+        position: relative;
+
+        margin-top: 30px;
+
+        >p{
+
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 600 !important;
+            font-size: rem(20px) !important;
+            line-height: rem(32px) !important;            
+        }
+        >div{
+            position: absolute;
+            left: -2.6%;
+            top: -39%;
+
+            @media only screen and (max-width: 425px) {
+                left: -5.6%;
+                top: -25%;                
+            }
+        }
+    }
+
+    >div{
+        margin-top: 59px;
+
+        ul{
+
+            padding-left: 58px;
+
+            li{
+                font-style: normal;
+                font-weight: 500;
+                font-size: rem(18px);
+                line-height: rem(28px);             
+
+                padding-bottom: 16px !important;
+            }
+        }
+    }
+}

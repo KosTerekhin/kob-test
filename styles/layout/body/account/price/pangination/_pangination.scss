@@ -1,0 +1,5 @@
+@import '../../../../../templates/pangination/pangination';
+
+.accountprice--pangination{
+    @include pangination
+}

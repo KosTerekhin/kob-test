@@ -1,0 +1,91 @@
+.productpage-inaction {
+    h5 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px;
+        text-transform: capitalize;
+        align-self: flex-start;
+        text-align: start;
+        color: var(--secondary-black-color);
+
+        margin: rem(53px) rem(226px) rem(13px) rem(261px) !important;
+
+        @media only screen and (max-width: 1800px){
+            margin: rem(53px) 8.5% rem(13px) 8.5% !important;
+        }
+    
+        @media only screen and (max-width: 1600px){
+            margin: rem(53px) 5.5% rem(13px) 5.5% !important;
+        }
+    
+        @media only screen and (max-width: 1500px){
+            margin: rem(53px) 1.5% rem(13px) 2.5% !important;
+        }
+    
+        @media only screen and (max-width: 1400px){
+            margin: rem(53px) 7.5% rem(13px) 7.5% !important;
+        }
+    
+        @media only screen and (max-width: 1300px){
+            margin: rem(53px) 4.5% rem(13px) 4.5% !important;
+        }
+    
+        @media only screen and (max-width: 1200px){
+            margin: rem(53px) 1.5% rem(13px) 1.5% !important;
+        }
+    
+        @media only screen and (max-width: 1050px){
+            margin: rem(53px) 0.5% rem(13px) 0.5%;
+        }   
+        
+        @include mobile-ultrasmall {
+            padding-left: rem(20px);
+        }
+
+        @media only screen and (max-width: 450px){
+            overflow: hidden;
+        } 
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.productpage-inaction-fouritem{
+    @include wrap-media;
+
+    @media only screen and (max-width: 450px){
+        overflow: hidden;
+    } 
+
+    h5 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px;
+        text-transform: capitalize;
+        align-self: flex-start;
+        text-align: start;
+        color: var(--secondary-black-color);
+        margin-bottom: rem(13px) !important;
+    }
+       
+
+        >div{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        width: 100%;
+
+            >img{
+                width: 49.5% !important;
+                height: 49.5% !important;
+                margin-bottom: 0.5%;
+            }
+    }
+}

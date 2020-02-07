@@ -1,0 +1,26 @@
+@mixin custom-input {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-bottom: 1.32px solid var(--product-border);
+    margin-bottom: 22px;
+    padding: 3px 0 10px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(18px);                      
+    line-height: rem(26px);
+    color: var(--product-border) !important;
+
+    &::placeholder{
+        color: var(--product-border) !important;
+    }
+
+    &:focus{
+        outline: none;
+
+        &::placeholder{
+            opacity: 0;
+        }
+    }
+}

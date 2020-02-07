@@ -1,0 +1,68 @@
+@import '../../../../../templates/checkmark/checkmark';
+
+.shoppingcart--confirmation{
+    border: 1px solid var(--cart-border);   
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 38px;
+    margin-bottom: rem(83px);
+
+    >h3 {
+        margin-top: 30px !important;
+    }
+
+    .conf-info{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid var(--cart-border);
+        
+        margin-top: rem(24px);
+        margin-left: rem(22px);
+        margin-right: rem(20px);
+        padding-left: 15.2%;
+        padding-right: 14.1%;
+
+        @include medium-screen{
+            padding-left: 5%;
+            padding-right: 5%;        
+        }
+
+        @include small-screen{
+            padding-left: 2%;
+            padding-right: 2%;   
+            align-items: center;     
+        }
+        // wrap for all inputs
+        >div {
+            display: flex;
+            justify-content: space-between;
+
+            @include small-screen{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+            }
+
+            @include mobile-ultrasmall{
+                width: 100%;
+            }
+
+
+        }
+        // terms checkmark
+        .cart-terms--checkmark{
+            @include cart-checkmark;
+            display: flex;
+            justify-content: center;
+
+            .shoppingcart---checkmark{
+                white-space: normal;
+            }
+
+            padding-bottom: 20px;
+        }
+    }
+
+}

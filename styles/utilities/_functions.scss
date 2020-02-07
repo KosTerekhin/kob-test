@@ -1,0 +1,11 @@
+@import './fonts';
+
+//  rem calculator
+
+@function rem($pixels, $content: $content-font){
+    @return ($pixels / $content ) * 1rem;
+};
+
+@function pix($rem, $content: $content-font){
+    @return ($rem / 1rem ) * $content;
+};

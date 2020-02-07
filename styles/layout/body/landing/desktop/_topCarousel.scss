@@ -1,0 +1,133 @@
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+@import '../../../../components/body/landing/carouselNav';
+
+h3 {
+    color: var(--main-black-color);
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: rem(42px) !important;
+    line-height: rem(60px) !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+
+    @include mobile-ultrasmall{
+        font-size: 36px !important;
+        line-height: 143.2% !important;
+    }
+}
+
+.landing--carousel-wrap {
+    align-self: center;
+    justify-self: center;
+
+    .owl-carousel .owl-item img {
+        display: block;
+        width: auto !important;
+    }
+
+    @include small-screen {
+       .owl-item {
+            display: flex;
+            justify-content: center;
+       }
+    }
+
+    // OWL NAV BAR
+    @include carousel-nav-arrows-desktop();
+    .owl-dots {
+        transform: translateY(-35%) translateX(14%);
+    }
+
+    .owl-nav{
+        width: auto;
+        transform: translateY(6px);
+    }
+
+    // mobile version
+    @include small-screen {
+        @include carousel-nav-arrows;
+        .owl-dots {
+            transform: translateY(-35%) translateX(6%);
+        }
+    }
+
+    >.owl-carousel {
+        margin-left: rem(75px) !important;
+        max-width: 25.5vw;
+        height: rem(825px);
+
+        @include medium-screen {
+            margin-left: 0 !important;
+        }
+
+        @include small-screen {
+            max-width: 43.5vw;
+        }
+
+        @include mobile-ultrasmall {
+            height: auto;
+            max-width: 340px;
+        }
+
+        @media (max-width: 320px) {
+            max-width: 299px;
+        }
+
+        .item {
+                margin-top: rem(143px) !important;
+                @include mobile-ultrasmall {
+                    margin-top: 0 !important;
+                    margin-left: 7px !important;
+                }
+
+                a{
+                    font-style: normal;
+                    font-weight: bold; 
+                    font-size: rem(120px);
+                    line-height: rem(100px);            
+                    text-transform: capitalize; 
+                    margin-bottom: rem(34px); 
+                }
+
+                .landing--product-btn{
+                    @include product-btn;
+                    margin-top: rem(33px);
+                }
+
+                >p{
+                    color: var(--landing-text-color);
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(18px);
+                    line-height: rem(22px); 
+                    width: rem(361px);
+                    text-align: left;
+
+                    @include mobile-ultrasmall{
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-left: 0 !important;
+                    }
+                }
+
+        
+                >img {
+                    width: rem(396px);
+                    height: rem(353px);
+
+                    @include medium-screen {
+                        height: rem(253px);
+                    }
+
+                    @include mobile-ultrasmall{
+                        width: 223.68px !important;
+                        height: 199.39px;
+                        transform: translateX(20%);
+                    }
+
+                }
+        }
+    }
+}

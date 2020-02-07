@@ -1,0 +1,27 @@
+@import '../../../../utilities/colors';
+@import '../../../../utilities/fonts';
+@import '../../../../utilities/functions';
+@import '../../../../utilities/mixins';
+
+@import './top/wrapMedias';
+@import './top/display';
+@import './name/name';
+@import './description/description';
+@import './char/characteristics';
+
+.compare-main-wrap {
+    @include main-wrap;
+
+    .compare--display{
+        @include compare--display;
+    }
+
+    .compare--description{
+        @include compare--description;
+
+        .compare---characteristics{
+            @include compare---characteristics
+        }
+    }
+
+} 

@@ -1,0 +1,7 @@
+@import '../../../../../templates/product/productSingle';
+@import '../../../../../templates/product/productSingle';
+
+@mixin historypage---tovari {
+   
+    @include five-products; 
+}

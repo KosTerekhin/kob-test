@@ -1,0 +1,346 @@
+// inside of the wrap
+
+@mixin body-carousel($cirles: 22px, $square: 61px) {
+    .owl-stage-outer {
+        padding-bottom: 109px !important;
+    }
+
+    .owl-item {
+        padding-top: 50px;
+    }
+
+    // THE DOTS
+    .owl-dots {
+        // DOTS OFFLINE
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(-35%) translateX(14%);
+
+        .owl-dot {
+            span {
+                width: $cirles!important;
+                height: $cirles !important;
+                border: 1px solid #C4C4C4 !important;
+                border-radius: 50%;
+                background-color: transparent !important;
+                margin: 5px 3px !important;
+
+                @include mobile-ultrasmall {
+                    width: 17.26px !important;
+                    height: 17.26px !important;
+                }
+            }
+        }
+
+        .active {
+            span {
+                background-color: #C4C4C4 !important;
+            }
+        }
+
+        @include mobile-ultrasmall {
+            display: block;
+            width: 100%;
+            left: 50%;
+            bottom: 15%;
+            transform: translateX(-50%);
+        }
+    }  
+    .owl-nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 !important;
+        width: 100%;
+        position: absolute;
+        bottom: 50%;
+
+        @include mobile-ultrasmall {
+            display: none;
+        }
+
+        transform: translateX(0%);
+        .owl-prev{
+            background-image: url(/styles/layout/body/landing/images/top/slider-left.svg) !important;
+            position: absolute;
+            left: 0;
+            bottom: 50%;
+            transform: translateX(-166%);
+
+            @include medium-screen {
+                transform: translateX(-110%);
+            }
+            @include small-screen {
+                transform: translateX(-100%);
+            }
+        }
+
+        .owl-next{
+            background-image: url(/styles/layout/body/landing/images/top/slider-right.svg) !important;
+            position: absolute;
+            right: 0;
+            bottom: 50%;
+            transform: translateX(166%);
+
+            @include medium-screen {
+                transform: translateX(110%);
+            }
+
+            @include small-screen {
+                transform: translateX(100%);
+            }
+        }
+
+        button {
+            margin: 0 !important;
+            width: $square !important;
+            height: $square !important;
+            background-color:#F5F5F5 !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 18% !important;
+            border-radius: 0 !important;
+
+            &:hover {
+                background-color:rgb(128, 127, 127) !important;
+            }
+
+            span {
+                display: none;
+            }
+        }  
+    }
+    // ADDING ITEM INTO CAROUSEL
+    >div {
+        .owl-carousel .owl-item img {
+            width: auto !important;    
+        }
+        
+        .item {
+            display: flex;
+            justify-content: center;
+
+            // signle product
+            @include body-item;                
+        }
+        // ADDING BORDER
+        .active {
+            >.item{
+                border-right: 0.930107px solid #DBDBDB;
+
+                @include mobile-ultrasmall {
+                    border-right: 0.930107px solid #DBDBDB !important;
+                }    
+            }
+
+            &:nth-of-type(4n) {
+                >.item{
+                    border-right: none;
+                }
+            }
+             
+            &:nth-last-of-type(1) {
+                >.item{
+                    @include mobile-ultrasmall {
+                        border-right: none !important;
+                    }   
+                }
+            }
+        }            
+    }
+}
+
+
+// <div class="catalogpage--bottom" >
+// <h3>НОВИНКИ</h3>
+// <div>
+//     <div class="loop owl-carousel owl-theme owl-loaded owl-drag" id="catalog-bottom-carousel">          
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">В наличии</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">Под заказ</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">Ожидается</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">В наличии</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">В наличии</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">В наличии</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">В наличии</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="item">
+//             <div>
+//                 <p class="novinka-active">новинка</p>
+//                 <img src="/styles/layout/body/catalog/images/desktop/body/item.png" alt="item">
+//                 <p>Микрофонная стойка "журавль" с телескопической стрелой Gravity TMS4322B</p>
+//                 <p>15 040 грн</p>   
+//                 <div>
+//                     <div>
+//                         <p id="product-name">В наличии</p>
+//                         <p>Код:LDDAVE8XSW</p>
+//                     </div>
+//                     <!-- hover  -->
+//                     <div >
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/star.svg" alt="start">
+//                         <img src="/styles/layout/body/catalog/images/desktop/body/compare.svg" alt="compare">
+//                         <a href="#" >  
+//                             Купить  
+//                             <img src="/styles/layout/body/catalog/images/desktop/body/shopping-cart.svg" alt="cart">
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+
+//      </div>                      
+// </div>
+// </div>

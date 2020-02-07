@@ -1,0 +1,35 @@
+@import '../../../../../templates/buttons/buyButton';
+
+.shoppingcart-completed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: rem(260px);
+    margin-bottom: rem(230px);
+
+
+    >h3{
+        margin-bottom: rem(82px) !important;
+    }
+
+    >h4{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 60px;       
+        text-align: center;
+        color: var(--secondary-black-color);
+        max-width: 1048px;
+        margin-bottom: rem(93px) !important;
+    }
+
+    >a{
+        @include buy-button-white(317.24px, 45px, 18px, 21px);
+        >p{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}

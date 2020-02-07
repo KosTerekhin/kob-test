@@ -1,0 +1,116 @@
+
+@mixin vertical-carousel {
+
+    .owl-carousel{
+        transform: rotate(90deg) translate(-33.5%, -264%);
+        width: 100%;
+
+        @include ultra-large {
+            transform: rotate(90deg) translate(-32%, -264%);
+        }
+
+        @media only screen and (max-width: 1600px){
+            transform: rotate(90deg) translate(-34%, -264%);
+        }
+        
+        @media only screen and (max-width: 1400px){
+            transform: rotate(90deg) translate(-35%, -264%);
+            width: 101%;
+        }
+        
+        @include small-screen {
+            transform: rotate(90deg) translate(-40%, -273%);
+        }
+
+        @media only screen and (max-width: 750px){
+            width: 86%;
+        }
+
+        @include mobile-screen {
+            transform: rotate(0deg) translate(8%, 116%);
+        }
+       
+    } 
+
+    .item{
+        transform: rotate(-90deg);
+        display: border-box;
+        border: 1.17201px solid var(--product-carousel-border) !important;
+        width: rem(148.84px);
+        cursor: pointer;
+
+        @media only screen and (max-width: 1400px){
+            width: rem(145.84px);
+        }
+        
+        @include mobile-screen {
+            transform: rotate(0deg); 
+        }
+
+        @media only screen and (max-width: 750px){
+            margin-left: 20%;
+        }
+
+        @media only screen and (max-width: 500px){
+            margin-left: 8%;
+        }
+    }
+    .owl-carousel .owl-nav{
+        z-index: -1;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+
+        top: 0;
+        left: 0;
+
+        button {
+            margin: 0 !important;
+            background-color:#F5F5F5 !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            border-radius: 0 !important;
+            background-size: 37% !important;
+
+            &:focus{
+               outline: 0; 
+            }
+
+            &:hover {
+                background-color:rgb(128, 127, 127) !important;
+            }
+
+            span {
+                display: none;
+            }
+        }  
+    }
+
+    .owl-prev{
+        background-image: url(/styles/layout/body/landing/images/top/slider-left.svg) !important;
+        position: absolute;
+        width: rem(25.78px);
+        height: 100%;
+
+        top: 0;
+        left: -7.5%;
+    }
+
+    .owl-next{
+        background-image: url(/styles/layout/body/landing/images/top/slider-right.svg) !important;
+        position: absolute;
+        width: rem(25.78px);
+        height: 100%;
+
+        top: 0;
+        right: -7.5%;
+    }
+
+    .owl-dots {
+        display: none !important;
+    }
+
+}
